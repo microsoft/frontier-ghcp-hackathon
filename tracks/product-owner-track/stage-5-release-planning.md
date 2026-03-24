@@ -8,7 +8,7 @@ A release plan is not just a list of features and dates. It is a risk management
 
 ## Tasks
 
-1. **Complete the release plan** in `docs/release-plan.md`. Map milestones to your GitHub Milestones and Issues. Every milestone must be independently shippable -- if you stopped after milestone 1, customers would get something useful.
+1. **Complete the release plan** in [docs/release-plan.md](../../challenges/challenge-0-product-planning/docs/release-plan.md). Map milestones to your GitHub Milestones and Issues. Every milestone must be independently shippable -- if you stopped after milestone 1, customers would get something useful.
 
 2. **Risk matrix** -- Replace the simple risk table with a proper probability-vs-severity matrix. Use a 3x3 or 5x5 grid. Each risk must have a probability score, severity score, composite score, mitigation plan, and trigger condition (what observable event tells you the risk is materializing).
 

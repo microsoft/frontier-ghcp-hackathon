@@ -1,4 +1,4 @@
-# Phase 1: DevOps Engineer Tasks
+# Phase 1: Discovery and Planning -- DevOps Engineer Tasks
 
 [Back to Phase 1 Overview](../phase-1-discovery-planning.md) | [Back to Team Sprint Track](../../bonus-team-sprint-track.md)
 

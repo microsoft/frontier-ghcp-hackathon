@@ -70,7 +70,7 @@ Follow the [common setup steps](getting-started.md) for the clean start. Then wr
 
 ---
 
-## Stages
+## Phases
 
 | Phase | Name | Est. Time | What You Build |
 |-------|------|-----------|----------------|

@@ -1,4 +1,4 @@
-# Phase 4: Polish and Advanced Features (Bonus)
+# Phase 4: Polish and Advanced Features
 
 [Back to Flight Delay Predictor Track](../bonus-flight-delay-track.md)
 

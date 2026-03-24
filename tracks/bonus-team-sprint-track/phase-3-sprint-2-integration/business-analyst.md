@@ -1,6 +1,6 @@
-# Phase 3: Business Analyst Tasks
+# Phase 3: Sprint 2 -- Business Analyst Tasks
 
-[Back to Phase 3 Overview](../phase-3-sprint-2-integration.md) | [Back to Team Sprint Track](../../bonus-team-sprint-track.md)
+[Back to Team Sprint Track](../../bonus-team-sprint-track.md)
 
 **Time: Full 2 hours**
 

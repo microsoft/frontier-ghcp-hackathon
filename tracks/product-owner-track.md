@@ -78,11 +78,11 @@ Your deliverables are documentation and a well-organized GitHub backlog, not cod
 
 | Stage | Name | Difficulty | Est. Time | What You Produce |
 |-------|------|------------|-----------|------------------|
-| 1 | [Product Vision & Market Analysis](product-owner-track/stage-1-product-vision.md) | ⭐ | 60-90 min | Product brief with competitive analysis and quantified personas |
-| 2 | [User Stories & Backlog Quality](product-owner-track/stage-2-user-stories.md) | ⭐⭐ | 60-90 min | 10+ user stories, critique of bad stories, MoSCoW prioritization |
-| 3 | [Feature Specs & Technical Alignment](product-owner-track/stage-3-feature-specs.md) | ⭐⭐ | 75-90 min | 2 feature specs with diagrams, spec review exercise |
+| 1 | [Product Vision and Market Analysis](product-owner-track/stage-1-product-vision.md) | ⭐ | 60-90 min | Product brief with competitive analysis and quantified personas |
+| 2 | [User Stories and Backlog Quality](product-owner-track/stage-2-user-stories.md) | ⭐⭐ | 60-90 min | 10+ user stories, critique of bad stories, MoSCoW prioritization |
+| 3 | [Feature Specification and Technical Alignment](product-owner-track/stage-3-feature-specs.md) | ⭐⭐ | 75-90 min | 2 feature specs with diagrams, spec review exercise |
 | 4 | [Decision Making Under Constraints](product-owner-track/stage-4-decision-making.md) | ⭐⭐⭐ | 60-90 min | 3 ADRs, stakeholder conflict resolution, buy-vs-build analysis |
-| 5 | [Release Planning & Go-to-Market](product-owner-track/stage-5-release-planning.md) | ⭐⭐⭐ | 60-90 min | Release plan with risk matrix, rollback plan, dual release notes |
+| 5 | [Release Planning and Go-to-Market](product-owner-track/stage-5-release-planning.md) | ⭐⭐⭐ | 60-90 min | Release plan with risk matrix, rollback plan, dual release notes |
 
 Each stage builds on the previous one. Copilot can help you draft and brainstorm, but the later stages require judgment, trade-off analysis, and critical thinking that you must bring yourself.
 

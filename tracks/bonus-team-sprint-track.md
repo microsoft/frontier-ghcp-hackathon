@@ -58,10 +58,10 @@ This is not a typical sequential hackathon track. The team works in parallel, li
 
 The challenge runs as a simulated sprint cycle:
 
-1. **Discovery** -- The PO prototypes an idea with GitHub Spark, writes stories, and creates a backlog on GitHub Issues. Everyone else sets up tooling and project scaffolding.
-2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features, QA writes tests, DevOps sets up infrastructure, the PO manages the board and reviews PRs.
+1. **Discovery** -- The PO prototypes an idea with GitHub Spark, exports the result into a GitHub repository (the handover), writes stories, and creates a backlog on GitHub Issues. The exported repo becomes the contract between the PO and the development team -- once it lands in a repo, there is no going back to Spark. Everyone else sets up tooling and project scaffolding.
+2. **Sprint 1** -- All roles work in parallel on their piece. Developers build core features (using the Spark handover repo as reference), QA writes tests, DevOps sets up infrastructure, the PO manages the board and reviews PRs.
 3. **Sprint 2** -- The team integrates, adds advanced features, fixes bugs, and starts deploying.
-4. **Ship It** -- Production deployment, final testing, demo, retrospective.
+4. **Ship and Demo** -- Production deployment, final testing, demo, retrospective.
 
 The PO and BA stay involved the entire time -- not just at the start. They manage the backlog, triage bugs, review work for acceptance criteria, and prepare the demo. GitHub Issues is the primary communication channel between roles.
 
@@ -74,7 +74,7 @@ Your team is building **CityPulse** -- a civic engagement platform. A fictional 
 - **Track report status** (submitted, acknowledged, in progress, resolved)
 - **View a dashboard** with neighborhood statistics (open reports, events this week, response times)
 
-The stakeholder brief is in `challenges/bonus-3-team-sprint/docs/stakeholder-brief.md`. Read it as a team before sprint planning.
+The stakeholder brief is in [challenges/bonus-3-team-sprint/docs/stakeholder-brief.md](../challenges/bonus-3-team-sprint/docs/stakeholder-brief.md). Read it as a team before sprint planning.
 
 ## Getting Started
 
@@ -104,7 +104,7 @@ Agree on shared agents during sprint planning so everyone benefits from the same
 
 ### Open the Challenge
 
-Navigate to `challenges/bonus-3-team-sprint/`. Read `docs/stakeholder-brief.md` as a team before starting Phase 1.
+Navigate to `challenges/bonus-3-team-sprint/`. Read the [stakeholder brief](../challenges/bonus-3-team-sprint/docs/stakeholder-brief.md) as a team before starting Phase 1.
 
 A dedicated devcontainer is provided at `.devcontainer/bonus-3-team-sprint/` with Node.js LTS, Python 3.11, Docker, GitHub CLI, Azure CLI, Terraform, and Playwright.
 

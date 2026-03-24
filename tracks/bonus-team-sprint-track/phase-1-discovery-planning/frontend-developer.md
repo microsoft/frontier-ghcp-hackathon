@@ -1,4 +1,4 @@
-# Phase 1: Frontend Developer Tasks
+# Phase 1: Discovery and Planning -- Frontend Developer Tasks
 
 [Back to Phase 1 Overview](../phase-1-discovery-planning.md) | [Back to Team Sprint Track](../../bonus-team-sprint-track.md)
 
@@ -12,7 +12,7 @@
    - Create a basic layout component (header, sidebar, main content area)
    - Add a placeholder home page
 
-2. **Review the PO's GitHub Spark prototype** -- Use it as a visual reference for the UI you will build. Note the page structure and user flows.
+2. **Review the Spark handover repo** -- The PO exported the GitHub Spark prototype into a repository. Clone it and study the generated code. This repo is the contract -- it defines the screens, data model, and user flows the team agreed to build. Decide what to keep as-is, what to adapt into your chosen framework, and what to rewrite from scratch. Use the Spark-generated components as a visual and structural reference, not necessarily as production code.
 
 3. **Write custom instructions** -- Add frontend context to `.github/copilot-instructions.md`: framework, component patterns, styling approach (Tailwind, CSS modules, etc.).
 

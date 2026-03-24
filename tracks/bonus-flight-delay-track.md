@@ -61,16 +61,16 @@ Navigate to `challenges/bonus-2-flight-delay/`. A dedicated devcontainer is prov
 
 ---
 
-## Stages
+## Phases
 
 This challenge is broken into four phases. Each phase builds on the previous one.
 
 | Phase | Name | Duration | Focus |
 |-------|------|----------|-------|
-| 1 | [Data Exploration & Model Building](bonus-flight-delay-track/phase-1-data-exploration.md) | 3-4 hours | Jupyter Notebook, data science, machine learning |
+| 1 | [Data Exploration and Model Building](bonus-flight-delay-track/phase-1-data-exploration.md) | 3-4 hours | Jupyter Notebook, data science, machine learning |
 | 2 | [Build the Prediction API](bonus-flight-delay-track/phase-2-prediction-api.md) | 2-3 hours | REST API, Flask or FastAPI, model serving |
 | 3 | [Build the Frontend](bonus-flight-delay-track/phase-3-frontend.md) | 2-3 hours | Frontend, UI/UX, API integration |
-| 4 | [Polish & Advanced Features](bonus-flight-delay-track/phase-4-polish.md) | 1-2 hours | Production readiness, bonus challenges |
+| 4 | [Polish and Advanced Features](bonus-flight-delay-track/phase-4-polish.md) | 1-2 hours | Production readiness, bonus challenges |
 
 ## Tips for Using Copilot on This Track
 

@@ -14,7 +14,7 @@
 
 ## Prerequisites
 
-<- TBC: Setup a GitHub workflow to deploy Demo Application via Helm TODO: fill in -->
+<!-- TODO: fill in prerequisites (e.g., deploying the demo application) -->
 
 ## Technology Stack
 

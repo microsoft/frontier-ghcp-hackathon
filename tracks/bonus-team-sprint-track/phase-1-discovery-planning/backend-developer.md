@@ -1,4 +1,4 @@
-# Phase 1: Backend Developer Tasks
+# Phase 1: Discovery and Planning -- Backend Developer Tasks
 
 [Back to Phase 1 Overview](../phase-1-discovery-planning.md) | [Back to Team Sprint Track](../../bonus-team-sprint-track.md)
 

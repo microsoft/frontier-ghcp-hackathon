@@ -8,19 +8,19 @@ Writing user stories is easy. Writing good ones is harder. This stage tests whet
 
 ## Tasks
 
-1. **Critique bad stories** -- Open `docs/bad-user-stories.md`. It contains 5 poorly-written user stories with common anti-patterns (solution-prescriptive language, missing "so that" clause, vague acceptance criteria, stories that are really epics, untestable criteria). For each story, identify the specific problem and rewrite it correctly. Document the before/after with an explanation of what was wrong.
+1. **Critique bad stories** -- Open [docs/bad-user-stories.md](../../challenges/challenge-0-product-planning/docs/bad-user-stories.md). It contains 5 poorly-written user stories with common anti-patterns (solution-prescriptive language, missing "so that" clause, vague acceptance criteria, stories that are really epics, untestable criteria). For each story, identify the specific problem and rewrite it correctly. Document the before/after with an explanation of what was wrong.
 
-2. **Write 10+ user stories** across the four epics in `docs/user-stories.md`. Each story must include acceptance criteria, priority, and size estimate.
+2. **Write 10+ user stories** across the four epics in [docs/user-stories.md](../../challenges/challenge-0-product-planning/docs/user-stories.md). Each story must include acceptance criteria, priority, and size estimate.
 
 3. **INVEST audit** -- For each of your 10 stories, self-assess against the INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable). Document any story that fails a criterion and explain how you would fix it (or why it is acceptable as-is).
 
 4. **MoSCoW prioritization** -- Categorize all stories using MoSCoW (Must have, Should have, Could have, Won't have). Write a short rationale for each "Must have" explaining why the release cannot ship without it, and for each "Won't have" explaining what would change your mind.
 
-5. **Create GitHub Issues** -- Convert your stories into GitHub Issues using the template in `templates/user-story-issue.md`. Apply labels for epic, priority, and MoSCoW category. Create at least 3 GitHub Milestones and assign each issue to one.
+5. **Create GitHub Issues** -- Convert your stories into GitHub Issues using the template in [templates/user-story-issue.md](../../challenges/challenge-0-product-planning/templates/user-story-issue.md). Apply labels for epic, priority, and MoSCoW category. Create at least 3 GitHub Milestones and assign each issue to one.
 
 ## Verification
 
-- All 5 bad stories in `docs/bad-user-stories.md` have a documented problem and corrected rewrite
+- All 5 bad stories in [docs/bad-user-stories.md](../../challenges/challenge-0-product-planning/docs/bad-user-stories.md) have a documented problem and corrected rewrite
 - At least 10 user stories with acceptance criteria, priority, and estimate
 - INVEST audit is documented for every story
 - MoSCoW prioritization includes written rationale for all "Must have" and "Won't have" items

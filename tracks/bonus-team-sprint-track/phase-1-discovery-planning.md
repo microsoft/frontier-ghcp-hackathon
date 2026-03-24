@@ -20,6 +20,14 @@ Find your role and follow the link for your detailed task list:
 | [DevOps Engineer](phase-1-discovery-planning/devops-engineer.md) | ~1 hr setup + 30 min planning | Dockerfile, docker-compose, CI pipeline, branching strategy |
 | [Business Analyst](phase-1-discovery-planning/business-analyst.md) | ~1 hr + 30 min planning | Refine acceptance criteria, data model, dashboard metrics *(optional role)* |
 
+## The Spark Handover
+
+Before sprint planning, the PO exports the GitHub Spark prototype into a GitHub repository and shares the link with the team. This exported repo is the contract between the PO and the developers -- it captures the screens, user flows, and data model that the team agreed to build.
+
+Every team member should clone the repo and review it. The frontend developer should pay close attention to the component structure and page layouts. The backend developer should look at the data model and API patterns implied by the UI.
+
+Once the Spark prototype lands in a repo, the team does not go back to Spark. All further changes happen through the normal development workflow: branches, pull requests, code review. The Spark app was a rapid ideation tool. From this point on, the repository is the single source of truth.
+
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 
 At the 1-hour mark, everyone pauses setup and joins a 30-minute planning session led by the PO:

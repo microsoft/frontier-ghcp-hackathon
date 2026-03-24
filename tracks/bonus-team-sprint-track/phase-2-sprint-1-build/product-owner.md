@@ -1,4 +1,4 @@
-# Phase 2: Product Owner Tasks
+# Phase 2: Sprint 1 -- Product Owner Tasks
 
 [Back to Phase 2 Overview](../phase-2-sprint-1-build.md) | [Back to Team Sprint Track](../../bonus-team-sprint-track.md)
 
