@@ -27,6 +27,8 @@ Each person takes exactly one role. The minimum team size is 4.
 
 There is no Product Owner or Business Analyst in this track. The functional specification is provided upfront. The team self-organizes using GitHub Issues and a shared project board.
 
+If a participant has skills across multiple disciplines, they can take on more than one role. For example, a full-stack developer could cover both backend and frontend (simplify the UI scope accordingly), or a developer could double as the DevOps engineer.
+
 ## Prerequisites
 
 Each team member needs skills matching their assigned role:
@@ -189,10 +191,6 @@ For each story, include acceptance criteria, priority, and size estimate."
 ```text
 "Create a multi-stage Dockerfile for a Node.js Express API. Dev stage with hot reload, production stage with minimal image."
 ```
-
-**Use the GitHub MCP server for Issue management:**
-
-The GitHub MCP server lets team members create Issues, add comments, and manage labels directly from Copilot Chat. This is useful for breaking the spec into stories and for filing bugs without leaving the editor.
 
 ## Resources
 
