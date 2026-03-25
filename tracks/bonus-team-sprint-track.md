@@ -183,41 +183,11 @@ Each phase contains detailed tasks for every role, broken into separate pages. P
 
 ## Tips for Using Copilot on This Track
 
-**PO -- use Copilot Chat for writing at scale:**
-
-```text
-"Write a user story for a resident submitting a pothole report. Include acceptance criteria, priority, and size estimate."
-```
-
-```text
-"Read the user stories in docs/user-stories.md and create a GitHub Issue for each one, labeled by epic."
-```
-
-**Developers -- start with API contracts:**
-
-```text
-"Generate an Express.js router for /api/reports with CRUD endpoints. Include input validation and proper HTTP status codes."
-```
-
-```text
-"Create a React component for a report submission form with fields for title, description, category dropdown, and location."
-```
-
-**QA -- describe the flow first:**
-
-```text
-"Write a Playwright E2E test for submitting a new issue report: fill in the form, submit, verify the report appears in the list."
-```
-
-**DevOps -- describe the target state:**
-
-```text
-"Create a multi-stage Dockerfile for a Node.js Express API. Dev stage with hot reload, production stage with minimal image."
-```
-
-**Use the GitHub MCP server for Issue management:**
-
-The GitHub MCP server lets team members create Issues, add comments, and manage labels directly from Copilot Chat. This is especially useful for the PO creating stories at scale and for QA filing bugs without leaving their editor.
+- **PO:** Write a rough story first, then ask Copilot to sharpen it. Use the GitHub MCP server to batch-create Issues from your stories file.
+- **Developers:** Describe the API contract or component structure in a comment before generating. The specifics (field names, status codes, prop types) matter more than length.
+- **QA:** Describe the user flow you want to test, then ask for Playwright code. One sentence of intent beats a detailed template.
+- **DevOps:** State the target ("multi-stage Dockerfile, alpine, non-root") and let Copilot fill in the details.
+- Each role benefits from anchoring prompts in the project domain (reports, categories, locations) rather than generic CRUD terms.
 
 ## Resources
 

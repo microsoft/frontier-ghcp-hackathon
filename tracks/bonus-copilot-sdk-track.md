@@ -81,13 +81,10 @@ Follow the [common setup steps](getting-started.md) for the clean start. Then wr
 
 ## Tips for Using Copilot on This Track
 
-**Use Copilot to build a Copilot-powered app -- meta!**
-
-- Ask Copilot to help you define custom tool schemas for the SDK -- start with "Define a tool schema that fetches merged PRs between two git refs"
-- Use `/explain` on the SDK types to understand the session event model
-- Ask: *"How should I categorize pull requests into features, fixes, breaking changes, and internal changes based on labels and title prefixes?"*
-- Use Agent mode to scaffold the full tool registration and event handling in one go
-- When building the changelog formatter, ask Copilot to generate templates matching popular formats (Keep a Changelog, GitHub's auto-generated notes style)
+- Use `/explain` on the SDK types to understand the session event model before writing handlers.
+- Start with a concrete tool schema ("a tool that fetches merged PRs between two refs") rather than asking Copilot to design the whole architecture at once.
+- Agent mode works well for scaffolding tool registration and event handling in one pass.
+- For the changelog formatter, ask Copilot for templates matching established formats like Keep a Changelog -- it gives better output with a known target.
 
 ## Resources
 

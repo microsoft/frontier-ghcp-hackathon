@@ -74,38 +74,10 @@ This challenge is broken into four phases. Each phase builds on the previous one
 
 ## Tips for Using Copilot on This Track
 
-**Data science -- start each cell with a descriptive comment:**
-
-```python
-# Load the flights dataset from data/flights.csv
-# Display shape, first 5 rows, and count of null values per column
-```
-
-**API development -- start with a blueprint:**
-
-```python
-# Flask API for flight delay prediction
-# Endpoints:
-# - GET /predict?day_of_week=<int>&airport_id=<int> → returns delay probability
-# - GET /airports → returns list of airports sorted by name
-# Load model from model.pkl, airports from airports.csv
-```
-
-**Frontend -- describe your UI:**
-
-```typescript
-// Create a form with:
-// - A dropdown populated from GET /airports
-// - A day-of-week selector (Monday through Sunday)
-// - A submit button that calls GET /predict and displays the result
-// - A results section showing delay probability as a percentage
-```
-
-**Debugging across the stack:**
-
-- CORS errors? Ask Copilot: *"How do I enable CORS in Flask?"*
-- Model not loading? Use `/fix` on the error traceback.
-- Frontend not rendering? Ask Copilot to review your component structure.
+- This track spans Python, Flask, and TypeScript. When switching layers, a comment describing the context ("Flask prediction endpoint" or "React form component") helps Copilot stay oriented.
+- For the API, sketch your endpoints as comments before generating code. Copilot needs the blueprint to produce sensible Flask routes.
+- When you hit CORS or model-loading errors, paste the traceback directly -- Copilot handles stack-specific debugging well when it can see the error.
+- For the frontend, describe the form fields and data flow in a comment. Copilot generates better UI code when it knows what API it's calling.
 
 ## Resources
 

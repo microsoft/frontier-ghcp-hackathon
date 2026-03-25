@@ -171,34 +171,10 @@ Each phase contains detailed tasks for every role, broken into separate pages. P
 
 ## Tips for Using Copilot on This Track
 
-**Getting from spec to Issues fast:**
-
-```text
-"Read docs/functional-spec.md and break the Trail Directory feature into user stories.
-For each story, include acceptance criteria, priority, and size estimate."
-```
-
-**Developers -- start with API contracts:**
-
-```text
-"Generate an Express.js router for /api/trails with CRUD endpoints. Include input validation and proper HTTP status codes."
-```
-
-```text
-"Create a React component for a trail card showing name, difficulty badge, distance, elevation, and status indicator."
-```
-
-**QA -- describe the flow first:**
-
-```text
-"Write a Playwright E2E test for submitting a trail condition report: select a trail, fill in the form, submit, verify the report appears."
-```
-
-**DevOps -- describe the target state:**
-
-```text
-"Create a multi-stage Dockerfile for a Node.js Express API. Dev stage with hot reload, production stage with minimal image."
-```
+- Use the GitHub MCP server to convert your functional spec into Issues quickly -- point Copilot at the spec file and ask it to break features into stories.
+- **Developers:** Describe API contracts and component props in terms of the project domain (trails, difficulty ratings, conditions) rather than generic CRUD.
+- **QA:** Describe the user flow first ("submit a trail condition report, verify it appears"), then ask for the Playwright test.
+- **DevOps:** State the target infrastructure (stages, base image, constraints) and let Copilot generate the manifest.
 
 ## Resources
 

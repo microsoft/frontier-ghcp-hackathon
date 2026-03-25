@@ -76,44 +76,10 @@ The application is already complete -- your job is the infrastructure. Copilot g
 
 ## Tips for Using Copilot on This Track
 
-**Describe infrastructure in comments:**
-
-```hcl
-# Create an Azure VNet with CIDR 10.0.0.0/16
-# Add public subnets in swedencentral
-# Add private subnets in the same AZs
-# Configure NAT gateway and routing tables
-```
-
-**Generate Kubernetes manifests:**
-
-```yaml
-# Create Deployment with:
-# - 3 replicas
-# - Rolling update strategy
-# - Resource limits: 200m CPU, 256Mi memory
-# - Liveness and readiness probes on /health
-```
-
-**Multi-stage Docker builds:**
-
-```dockerfile
-# Create a multi-stage Dockerfile for Node.js app
-# Stage 1: Build with all dependencies
-# Stage 2: Production with minimal image size
-# Use alpine base, non-root user, optimized caching
-```
-
-**CI/CD pipelines:**
-
-```yaml
-# GitHub Actions workflow to:
-# 1. Run Terraform validate and plan
-# 2. Build and scan Docker image
-# 3. Push to registry
-# 4. Deploy to Kubernetes
-# 5. Run smoke tests
-```
+- Describe your infrastructure goal as a comment block before generating HCL or YAML. The comment doubles as documentation.
+- For Kubernetes manifests, specify resource limits, probe paths, and replica counts up front -- Copilot will use whatever constraints you give it.
+- When generating CI/CD pipelines, list the stages in order as comments. Copilot follows the sequence you lay out.
+- Review generated Dockerfiles and Terraform carefully for security defaults (non-root users, least-privilege IAM, image pinning). Copilot gets the structure right but sometimes skips hardening.
 
 ## Resources
 

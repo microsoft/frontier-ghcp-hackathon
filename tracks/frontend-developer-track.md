@@ -72,43 +72,10 @@ Each stage builds on the previous one. Copilot excels at scaffolding React compo
 
 ## Tips for Using Copilot on This Track
 
-**Describe components in comments:**
-
-```typescript
-// Create a ProductCard component that displays:
-// - Product image
-// - Product name and description
-// - Price with currency formatting
-// - Add to cart button
-// Props: product (with id, name, description, price, imageUrl)
-```
-
-**Generate TypeScript interfaces:**
-
-```typescript
-// Define interface for User with:
-// - id (number)
-// - email (string)
-// - firstName and lastName (string)
-// - avatar (optional string)
-// - createdAt (Date)
-```
-
-**Ask for complete state management patterns:**
-
-```typescript
-// Create a custom hook useAuth that:
-// - Manages authentication state
-// - Provides login, logout, and register functions
-// - Stores user in context
-// - Persists to localStorage
-```
-
-**Generate tests from existing code:**
-
-1. Highlight your component
-2. Use `/tests create tests for this component`
-3. Review and add edge cases
+- Define your TypeScript interfaces first, then generate the components that use them. Types give Copilot much better context.
+- Describe a component's props and behavior in a comment before asking Copilot to generate it. A few lines of intent produce better JSX than a vague prompt.
+- Keep the file you're testing open when asking for test cases -- Copilot reads it as context.
+- For state management hooks, outline the public API (what it returns, what side effects it has) before generating the implementation.
 
 ## Resources
 

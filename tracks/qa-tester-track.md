@@ -112,10 +112,10 @@ Copilot generates test boilerplate efficiently, but Stage 1 starts with debuggin
 
 ## Tips for Using Copilot on This Track
 
-- **Context is King**: When asking Copilot to write tests, keep the file you want to test open.
-- **MCP Debugging**: If the MCP tool fails, check the "Output" panel in VS Code and select "GitHub Copilot MCP" to see logs.
-- **Port Forwarding**: Ensure the application port is forwarded in the DevContainer so the headless browser (and you) can access it.
-- **Aspire Dashboard**: Use the Aspire dashboard to monitor all microservices and find the correct URLs for each service.
+- Keep the file under test open when generating test cases -- Copilot reads it as context.
+- Describe the user flow you want to test before asking for Playwright code. A sentence of intent beats a blank prompt.
+- If the MCP tool fails, check the Output panel in VS Code under "GitHub Copilot MCP" for logs.
+- Make sure the application port is forwarded in the DevContainer so the headless browser can reach it.
 
 ## Resources
 

@@ -73,40 +73,10 @@ The dataset is intentionally messy. Copilot can generate pandas and scikit-learn
 
 ## Tips for Using Copilot on This Track
 
-**Comment-driven analysis in notebooks:**
-
-```python
-# Load the dataset, display first 5 rows, show column types and missing values
-# Create a summary statistics table for all numerical columns
-```
-
-**Describe feature engineering in comments:**
-
-```python
-# Create age groups: 0-18, 19-35, 36-55, 56+
-# Generate interaction features between income and credit_score
-# One-hot encode categorical variables preserving column names
-```
-
-**Generate complex visualizations:**
-
-```python
-# Create a 2x2 subplot showing:
-# 1. Distribution of target variable
-# 2. Correlation heatmap of top features
-# 3. Box plots for each numerical feature by target
-# 4. Count plot for categorical variables
-```
-
-**Efficient model comparison:**
-
-```python
-# Train LogisticRegression, RandomForest, and GradientBoosting
-# Evaluate each with cross-validation
-# Display results in a comparison table with accuracy, precision, recall, F1
-```
-
-Use `/explain` on any algorithm Copilot suggests to understand how it works.
+- Start each notebook cell with a comment describing the analysis step. Copilot generates better pandas and sklearn code when it knows the intent.
+- For visualizations, describe the layout (subplot grid, axes, colors) in a comment. Copilot handles matplotlib well with a clear spec.
+- When Copilot suggests an algorithm you're not sure about, use `/explain` on it before moving on.
+- Feature engineering is where comments pay off most -- specify the binning strategy, encoding approach, or interaction terms you want.
 
 ## Resources
 

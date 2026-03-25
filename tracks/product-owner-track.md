@@ -90,30 +90,10 @@ Each stage builds on the previous one. Copilot can help you draft and brainstorm
 
 ## Tips for Using Copilot on This Track
 
-**Write a rough draft first, then refine with Copilot:**
-
-- "Make this user story more specific and add acceptance criteria."
-- "Rewrite this paragraph to be shorter and more direct."
-- "What am I not thinking about in this feature spec?"
-
-Copilot is better at refining your ideas than starting from nothing. Give it something to work with.
-
-**Create GitHub Issues at scale with MCP:**
-
-- "Read the user stories in docs/user-stories.md and create a GitHub issue for each one."
-- "Add the label 'epic:collaboration' to all issues related to team features."
-
-**Generate Mermaid diagrams:**
-
-GitHub renders Mermaid diagrams natively in markdown. Ask Copilot to create flowcharts, sequence diagrams, or Gantt charts from plain-language descriptions.
-
-**Use ADRs as thinking tools:**
-
-When you are unsure about a product decision, write an ADR. The process of listing options and trade-offs often makes the right choice obvious.
-
-**Critiquing AI-generated content:**
-
-In the critique exercises (Stages 2 and 3), Copilot can help you spot generic problems. But the harder issues -- contradictory requirements, misaligned priorities, untestable criteria -- are things you need to catch through careful reading.
+- Write a rough draft first, then ask Copilot to tighten it. Copilot refines ideas better than it invents them from nothing.
+- The GitHub MCP server lets you create Issues at scale from your stories file -- useful when you have a batch of user stories ready.
+- ADRs double as thinking tools. Listing options and trade-offs often makes the right choice obvious before you finish writing.
+- In the critique exercises, Copilot spots surface-level issues well. Contradictions, priority conflicts, and untestable criteria are on you.
 
 ## Resources
 
