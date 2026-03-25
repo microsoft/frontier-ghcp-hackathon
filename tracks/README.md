@@ -118,7 +118,7 @@ Completed your main track? These advanced tracks go deeper.
 
 ### 🥾 [Bonus: Technical Team Sprint](./bonus-tech-sprint-track.md)
 
-**Best for:** Teams of 4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
+**Best for:** Teams of 2-4 developers/engineers who want to build a complete application from a provided specification, without business stakeholders
 
 **Focus:** Technical sprint -- from specification to production deployment, self-organized team
 
@@ -141,7 +141,7 @@ Completed your main track? These advanced tracks go deeper.
    - Product Owner/BA/PM → Product Owner & BA Track
    - Finished a core track and want more? → Bonus tracks
    - Cross-functional team (PO + devs + QA + DevOps)? → Bonus: Team Sprint
-   - Technical team (devs + QA + DevOps, no PO)? → Bonus: Technical Team Sprint
+   - Technical team (devs + DevOps, optionally QA, no PO)? → Bonus: Technical Team Sprint
 
 2. **What do you want to learn?**
    - Building REST APIs → Backend Track

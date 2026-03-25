@@ -6,28 +6,36 @@
 
 **Focus:** End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role
 
-> This track requires a team of technical people. It is not designed for solo participants. Gather 4 developers/engineers from different disciplines and run through it together.
+> This track is designed for teams of up to 4 developers/engineers. It works with 2, 3, or 4 people -- smaller teams just combine roles. See the Team Composition section below.
 
 ## Who Is This For
 
-- Teams of 4 developers and engineers who want to build a complete application together from a given specification
+- Teams of 2-4 developers and engineers who want to build a complete application together from a given specification
 - Organizations that want to simulate a real agile sprint powered by GitHub Copilot, with no business stakeholders in the room
-- Groups with strong technical skills across backend, frontend, QA, and operations
+- Groups with strong technical skills across backend, frontend, and operations (QA is a bonus if you have the headcount)
 
 ## Team Composition
 
-Each person takes exactly one role. The minimum team size is 4.
+The track supports teams of 2-4 people. Each person takes one or more roles depending on team size.
 
 | Role | Required | What They Do |
-|------|----------|--------------|
+|------|----------|------------|
 | Backend Developer | Yes | API design, business logic, database, server-side tests |
 | Frontend Developer | Yes | UI components, routing, styling, API integration |
-| QA Engineer | Yes | Test strategy, E2E test automation, bug reporting |
+| QA Engineer | No | Test strategy, E2E test automation, bug reporting |
 | DevOps Engineer | Yes | Containers, CI/CD, infrastructure, deployment |
 
 There is no Product Owner or Business Analyst in this track. The functional specification is provided upfront. The team self-organizes using GitHub Issues and a shared project board.
 
-If a participant has skills across multiple disciplines, they can take on more than one role. For example, a full-stack developer could cover both backend and frontend (simplify the UI scope accordingly), or a developer could double as the DevOps engineer.
+### Adapting to Your Team Size
+
+**4 people** -- one role each, the ideal setup.
+
+**3 people** -- drop the QA Engineer role. Developers write their own tests (unit and integration), and the DevOps engineer adds basic E2E smoke tests to the CI pipeline. Skip the QA-specific pages in each phase.
+
+**2 people** -- one person covers both Backend and Frontend (simplify the UI scope), the other covers DevOps. Skip QA entirely. Focus on getting a working deployment with core features rather than full coverage.
+
+A full-stack developer can also split the Backend and Frontend work however they want -- there is no strict boundary. The role pages are there to organize tasks, not to lock anyone into a lane.
 
 ## Prerequisites
 

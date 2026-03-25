@@ -19,7 +19,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 🧩 **[Bonus: Copilot SDK Track](./tracks/bonus-copilot-sdk-track.md)** - Build a Copilot SDK application (advanced)
 - ✈️ **[Bonus: Flight Delay Predictor Track](./tracks/bonus-flight-delay-track.md)** - Full-stack ML app (advanced)
 - 🏢 **[Bonus: Cross-Functional Team Sprint](./tracks/bonus-team-sprint-track.md)** - Full team agile sprint, ideation to deployment (4-6 people)
-- 🥾 **[Bonus: Technical Team Sprint](./tracks/bonus-tech-sprint-track.md)** - Technical team sprint from spec to deployment (4 developers)
+- 🥾 **[Bonus: Technical Team Sprint](./tracks/bonus-tech-sprint-track.md)** - Technical team sprint from spec to deployment (2-4 developers)
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
@@ -255,7 +255,7 @@ Build CityPulse, a civic engagement platform, from scratch as a cross-functional
 
 ### [Bonus 4: Technical Team Sprint (TrailMate)](./challenges/bonus-4-tech-sprint/) ([Track](./tracks/bonus-tech-sprint-track.md))
 
-**Team**: Technical team of 4 (Backend Dev, Frontend Dev, QA, DevOps -- no PO or BA)
+**Team**: Technical team of 2-4 (Backend Dev, Frontend Dev, DevOps required; QA optional -- no PO or BA)
 **Duration**: 8 hours (team bonus challenge)
 **Skills**: Express.js/FastAPI, React/Vue, Playwright, Docker, Azure, Terraform, GitHub Issues/Projects
 **Copilot Focus**: Every technical role uses Copilot -- developers for code generation, QA for test automation, DevOps for infrastructure
