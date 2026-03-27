@@ -21,7 +21,6 @@ export class LoginPage extends BasePage {
   constructor(page: Page) {
     super(page);
     
-    // Bug 1: This selector targets an element that doesn't exist, causing timeouts
     this.usernameInput = page.locator('[data-testid="user-name-field"]').first();
     this.passwordInput = page.locator('[data-testid="password"], #password, input[name="password"], input[type="password"]').first();
     this.submitButton = page.locator('[data-testid="login-submit"], button[type="submit"], input[type="submit"]').first();
@@ -44,8 +43,6 @@ export class LoginPage extends BasePage {
   async login(username: string, password: string): Promise<void> {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
-    // Bug 2: Missing await causes race condition -- click fires but test
-    // continues before navigation completes, causing flaky failures
     this.submitButton.click();
   }
   
@@ -53,8 +50,6 @@ export class LoginPage extends BasePage {
    * Get the error message text if visible
    */
   async getErrorMessage(): Promise<string | null> {
-    // Bug 3: innerText() behaves differently than textContent() across browsers
-    // and throws if element is not visible instead of returning null
     return await this.errorMessage.innerText();
   }
   

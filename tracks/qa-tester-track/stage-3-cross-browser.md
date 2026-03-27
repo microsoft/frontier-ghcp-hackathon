@@ -18,7 +18,7 @@ Login tests are passing. Now expand coverage to the core shopping flow and run t
 
 3. **Run across browsers**: The `playwright.config.ts` already includes Chromium, Firefox, and WebKit. Run `npx playwright test` -- it will execute on all browsers. If tests fail on some browsers but not others, paste the error into Copilot Chat and ask for help diagnosing browser-specific issues.
 
-4. **Mobile viewport testing**: Run tests against the Pixel 5 mobile profile (already configured). Ask Copilot: "The test fails on mobile because the menu is collapsed. How do I handle a hamburger menu in Playwright?" Apply the fix.
+4. **Mobile viewport testing**: Run tests against the Pixel 5 mobile profile (already configured in `playwright.config.ts`). At this viewport width the product grid reflows and filter links stack vertically. Ask Copilot to help you write assertions that verify the catalog still renders products and that filter links remain interactive at mobile sizes. If any test relies on hover behavior, it will break on a touch device profile -- ask Copilot how to handle that difference.
 
 5. **Screenshot comparison**: Ask Copilot to add screenshot capture to key test steps (catalog page, basket page). Save them to a `screenshots/` directory. Compare screenshots across browsers manually -- note any layout differences.
 

@@ -18,16 +18,14 @@ npx @playwright/mcp@latest
 
 ### 2. Configure VS Code
 
-Add to your VS Code settings (`.vscode/settings.json`):
+Add to your VS Code settings (`.vscode/mcp.json`):
 
 ```json
 {
-  "mcp": {
-    "servers": {
-      "playwright": {
-        "command": "npx",
-        "args": ["@playwright/mcp@latest"]
-      }
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
     }
   }
 }
@@ -132,6 +130,8 @@ Test the form validation by entering invalid data and report the behavior.
 
 ### Browser Issues
 
+- Run `npm install` to ensure Playwright dependencies are installed from the `challenges/challenge-5-qa` directory
+- Run `npx playwright install-deps` to install OS-level dependencies for browsers
 - Run `npx playwright install` to ensure browsers are installed
 - Check for firewall or proxy issues blocking browser downloads
 
