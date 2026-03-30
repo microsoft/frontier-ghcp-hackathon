@@ -14,9 +14,9 @@
 
 4. **Set up GitHub Actions** -- Create a CI workflow (`.github/workflows/ci.yml`) that runs on PRs. Start with a lint step and a placeholder test step.
 
-5. **Write custom instructions** -- Add DevOps context to `.github/copilot-instructions.md`: Docker conventions, CI/CD approach, Azure deployment target.
+5. **Write custom instructions** -- Add DevOps context to `.github/copilot-instructions.md`: Docker conventions, compose service names, CI/CD approach, and how the local stack is structured.
 
-6. **Create an infra agent** -- Create `.github/agents/infra-engineer.agent.md` with Docker, GitHub Actions, and Azure deployment context.
+6. **Create an infra agent** -- Create `.github/agents/infra-engineer.agent.md` with Docker Compose, GitHub Actions, and local networking context. Include the names and ports of each service in the compose file.
 
 7. **Sprint planning** -- Join the PO's planning session. Confirm infrastructure timeline.
 

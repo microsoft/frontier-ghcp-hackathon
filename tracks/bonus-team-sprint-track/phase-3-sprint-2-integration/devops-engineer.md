@@ -6,28 +6,30 @@
 
 ## Tasks
 
-1. **Deploy to Azure:**
-   - Apply the Terraform or Bicep config to create Azure resources
-   - Build and push Docker images (to Azure Container Registry or GitHub Container Registry)
-   - Deploy backend and frontend to Azure App Service, Container Apps, or AKS
-   - Verify the deployed application loads and APIs respond
+1. **Add a reverse proxy** -- Add an nginx (or Traefik) service to `docker-compose.yml` that sits in front of the backend and frontend. Route `/api/` to the backend and everything else to the frontend. This removes the need for the frontend to know the backend's port at runtime.
 
-2. **Configure the production environment:**
-   - Set environment variables in Azure (database connection, API URL, CORS origins)
-   - Enable HTTPS
-   - Configure CORS so the frontend can call the backend
+2. **Make the stack shareable** -- Make sure anyone on the team can run `docker compose up` from a fresh clone and have a working application within a minute or two:
+   - Document the setup steps in `docs/local-setup.md` (clone, copy `.env.example` to `.env`, run compose)
+   - Confirm the database migrations or seed data run automatically on first start
+   - Test this by having another team member (or the QA engineer) try the steps from scratch
 
-3. **Set up monitoring basics:**
-   - Health check endpoint monitoring (Azure Monitor or Application Insights)
-   - Ensure container logs are accessible for debugging
+3. **Add a CI smoke test** -- Update the GitHub Actions workflow to spin up the compose stack and verify the application responds. A simple `curl` against the health check endpoint is enough:
 
-4. **Update the CI pipeline** -- Add a deployment step that deploys to a staging or production environment on merge to main.
+   ```yaml
+   - name: Start stack
+     run: docker compose up -d --wait
+   - name: Smoke test
+     run: curl --fail http://localhost/api/health
+   ```
+
+4. **Review container logs** -- Make sure each service writes structured logs that are readable with `docker compose logs <service>`. If the backend uses a logger, confirm the format is consistent.
 
 ## Verification
 
-- [ ] Application deployed to Azure and accessible via a public URL
-- [ ] CI pipeline includes a deployment step
-- [ ] Health check or monitoring baseline in place
+- [ ] Reverse proxy routing `/api/` to backend and `/` to frontend
+- [ ] Another team member can start the full stack from scratch with `docker compose up`
+- [ ] `docs/local-setup.md` written
+- [ ] CI workflow runs a smoke test against the compose stack
 
 ---
 
