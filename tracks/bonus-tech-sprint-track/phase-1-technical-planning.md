@@ -36,7 +36,7 @@ Since there is no Product Owner, the team creates the GitHub Issues together. Du
 3. Label each Issue with its epic, priority, and size
 4. The team reviews the Issues together and resolves any overlaps or gaps
 
-Use Copilot to speed this up -- paste the functional spec into chat and ask it to generate user stories for each epic.
+Use Copilot to speed this up -- paste the functional spec into chat and ask it to generate user stories for each epic, and use GitHub MCP Server to automatically create the Issues.
 
 ## Sync Point: Sprint Planning Meeting (at ~1:00)
 

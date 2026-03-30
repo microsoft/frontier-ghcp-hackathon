@@ -28,37 +28,6 @@ Brief 5-minute standup, either in person or asynchronous via a GitHub Issue labe
 
 If anyone is blocked, resolve it immediately. If the frontend developer needs the API spec finalized, that takes priority. If QA needs seed data, the backend developer provides it.
 
-## Copilot Tips for This Phase
-
-**Backend -- generate CRUD fast:**
-
-Ask Copilot to scaffold an entire router from your API spec document. Reference the spec file in your prompt for context:
-
-```text
-"Read docs/api-spec.md and generate an Express.js router for the Trails endpoints with input validation."
-```
-
-**Frontend -- mock data while waiting for the API:**
-
-```typescript
-// Generate an array of 10 sample TrailMate trails with realistic hiking data
-// Include: id, name, description, difficulty, distanceKm, elevationGainM, estimatedTime, status, park
-```
-
-**QA -- generate page objects from the spec:**
-
-```text
-"Create a Playwright page object for the Trail List page with selectors for the search input,
-difficulty filter dropdown, status filter, and trail cards."
-```
-
-**DevOps -- generate Dockerfiles with Copilot:**
-
-```text
-"Create a multi-stage Dockerfile for a React app built with Vite.
-Build stage uses Node 20, production stage uses nginx:alpine."
-```
-
 ## Verification
 
 **Backend Developer:**
