@@ -6,6 +6,7 @@
 #   2. Removes all custom agents from .github/agents/ (keeps .gitkeep)
 #   3. Removes all custom skills from .github/skills/
 #   4. Removes the git remote "origin" so you don't accidentally push to the template repo
+#   5. Stages and commits the cleaned state so you start with a clean working tree
 #
 # Usage:
 #   .\scripts\clean-start.ps1
@@ -60,6 +61,14 @@ try {
     Write-Host "[SKIP] No git remote 'origin' found" -ForegroundColor Yellow
 }
 
+# 5. Stage and commit the clean state
+git -C $RepoRoot add -A
+git -C $RepoRoot commit -m "Clean start: reset for hackathon" --quiet
+Write-Host "[OK] Committed clean state to local repo" -ForegroundColor Green
+
 Write-Host ""
-Write-Host "Done. You now have a clean .github directory." -ForegroundColor Cyan
-Write-Host "Next step: write your own .github/copilot-instructions.md for your project."
+Write-Host "Done. Your repo is clean and committed locally." -ForegroundColor Cyan
+Write-Host "Next steps:"
+Write-Host "  1. Add your own remote:  git remote add origin <your-repo-url>"
+Write-Host "  2. Write your .github/copilot-instructions.md"
+Write-Host "  3. Push when ready:      git push -u origin main"

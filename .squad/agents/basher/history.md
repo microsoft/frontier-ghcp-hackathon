@@ -12,3 +12,5 @@
 - VS Code workspace settings in .vscode/
 
 ## Learnings
+
+- Added step 5 to both clean-start scripts (`.sh` and `.ps1`): after wiping `.github/` contents and removing the remote, the scripts now run `git add -A` and `git commit` to give participants a committed baseline. Previously the cleanup left uncommitted changes floating in the working tree, which is messy for people unfamiliar with git. The commit message is "Clean start: reset for hackathon". Updated header comments and closing output to match.
