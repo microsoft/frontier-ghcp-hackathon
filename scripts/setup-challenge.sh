@@ -49,6 +49,7 @@ declare -A CHALLENGE_MAP=(
   [bonus-9-backlog-generator]="bonus-9-backlog-generator"
   [bonus-10-ops-assistant]="bonus-10-ops-assistant"
   [bonus-11-spec-to-ship]="bonus-11-spec-to-ship"
+  [challenge-6-agentic-workflows]="challenge-6-agentic-workflows"
 )
 
 declare -A TRACK_MAP=(
@@ -69,6 +70,7 @@ declare -A TRACK_MAP=(
   [bonus-9-backlog-generator]="bonus-backlog-generator-track"
   [bonus-10-ops-assistant]="bonus-ops-assistant-track"
   [bonus-11-spec-to-ship]="bonus-spec-to-ship-track"
+  [challenge-6-agentic-workflows]="agentic-workflows-track"
 )
 
 # ── Validate input ──────────────────────────────────────────────────
