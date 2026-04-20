@@ -123,6 +123,46 @@ if [[ -d "$SKILLS_DIR" ]]; then
   echo "[OK] Removed sample skills from .github/skills/"
 fi
 
+# Remove Squad GitHub workflows (not participant-facing)
+WORKFLOWS_DIR="$REPO_ROOT/.github/workflows"
+if [[ -d "$WORKFLOWS_DIR" ]]; then
+  rm -rf "${WORKFLOWS_DIR:?}"
+  echo "[OK] Removed .github/workflows/"
+fi
+
+# Remove .github/prompts (template-only artifact)
+PROMPTS_DIR="$REPO_ROOT/.github/prompts"
+if [[ -d "$PROMPTS_DIR" ]]; then
+  rm -rf "${PROMPTS_DIR:?}"
+  echo "[OK] Removed .github/prompts/"
+fi
+
+# ── Clean non-participant top-level directories ─────────────────────
+
+# Remove .copilot/ (MCP config and Squad skills -- not for participants)
+if [[ -d "$REPO_ROOT/.copilot" ]]; then
+  rm -rf "$REPO_ROOT/.copilot"
+  echo "[OK] Removed .copilot/"
+fi
+
+# Remove .squad/ (Squad orchestration state -- not for participants)
+if [[ -d "$REPO_ROOT/.squad" ]]; then
+  rm -rf "$REPO_ROOT/.squad"
+  echo "[OK] Removed .squad/"
+fi
+
+# Remove .playwright-mcp/ (debug logs -- not for participants)
+if [[ -d "$REPO_ROOT/.playwright-mcp" ]]; then
+  rm -rf "$REPO_ROOT/.playwright-mcp"
+  echo "[OK] Removed .playwright-mcp/"
+fi
+
+# Remove .gitattributes (Squad merge drivers -- not needed)
+if [[ -f "$REPO_ROOT/.gitattributes" ]]; then
+  rm -f "$REPO_ROOT/.gitattributes"
+  echo "[OK] Removed .gitattributes"
+fi
+
 if git -C "$REPO_ROOT" remote get-url origin &>/dev/null; then
   git -C "$REPO_ROOT" remote remove origin
   echo "[OK] Removed git remote 'origin'"

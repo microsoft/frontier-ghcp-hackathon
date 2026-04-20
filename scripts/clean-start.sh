@@ -6,8 +6,11 @@
 #   1. Empties .github/copilot-instructions.md
 #   2. Removes all custom agents from .github/agents/ (keeps .gitkeep)
 #   3. Removes all custom skills from .github/skills/
-#   4. Removes the git remote "origin" so you don't accidentally push to the template repo
-#   5. Stages and commits the cleaned state so you start with a clean working tree
+#   4. Removes Squad workflows from .github/workflows/
+#   5. Removes .github/prompts/
+#   6. Removes .copilot/, .squad/, .playwright-mcp/, .gitattributes
+#   7. Removes the git remote "origin" so you don't accidentally push to the template repo
+#   8. Stages and commits the cleaned state so you start with a clean working tree
 #
 # Usage:
 #   chmod +x scripts/clean-start.sh
@@ -48,7 +51,54 @@ else
     echo "[SKIP] .github/skills/ not found"
 fi
 
-# 4. Remove git remote origin
+# 4. Remove Squad GitHub workflows
+WORKFLOWS_DIR="$REPO_ROOT/.github/workflows"
+if [ -d "$WORKFLOWS_DIR" ]; then
+    rm -rf "$WORKFLOWS_DIR"
+    echo "[OK] Removed .github/workflows/"
+else
+    echo "[SKIP] .github/workflows/ not found"
+fi
+
+# 5. Remove .github/prompts
+PROMPTS_DIR="$REPO_ROOT/.github/prompts"
+if [ -d "$PROMPTS_DIR" ]; then
+    rm -rf "$PROMPTS_DIR"
+    echo "[OK] Removed .github/prompts/"
+else
+    echo "[SKIP] .github/prompts/ not found"
+fi
+
+# 6. Remove non-participant top-level directories and files
+if [ -d "$REPO_ROOT/.copilot" ]; then
+    rm -rf "$REPO_ROOT/.copilot"
+    echo "[OK] Removed .copilot/"
+else
+    echo "[SKIP] .copilot/ not found"
+fi
+
+if [ -d "$REPO_ROOT/.squad" ]; then
+    rm -rf "$REPO_ROOT/.squad"
+    echo "[OK] Removed .squad/"
+else
+    echo "[SKIP] .squad/ not found"
+fi
+
+if [ -d "$REPO_ROOT/.playwright-mcp" ]; then
+    rm -rf "$REPO_ROOT/.playwright-mcp"
+    echo "[OK] Removed .playwright-mcp/"
+else
+    echo "[SKIP] .playwright-mcp/ not found"
+fi
+
+if [ -f "$REPO_ROOT/.gitattributes" ]; then
+    rm -f "$REPO_ROOT/.gitattributes"
+    echo "[OK] Removed .gitattributes"
+else
+    echo "[SKIP] .gitattributes not found"
+fi
+
+# 7. Remove git remote origin
 if git -C "$REPO_ROOT" remote get-url origin &>/dev/null; then
     REMOTE_URL=$(git -C "$REPO_ROOT" remote get-url origin)
     git -C "$REPO_ROOT" remote remove origin
@@ -57,7 +107,7 @@ else
     echo "[SKIP] No git remote 'origin' found"
 fi
 
-# 5. Stage and commit the clean state
+# 8. Stage and commit the clean state
 git -C "$REPO_ROOT" add -A
 git -C "$REPO_ROOT" commit -m "Clean start: reset for hackathon" --quiet
 echo "[OK] Committed clean state to local repo"

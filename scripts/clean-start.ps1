@@ -5,8 +5,11 @@
 #   1. Empties .github/copilot-instructions.md
 #   2. Removes all custom agents from .github/agents/ (keeps .gitkeep)
 #   3. Removes all custom skills from .github/skills/
-#   4. Removes the git remote "origin" so you don't accidentally push to the template repo
-#   5. Stages and commits the cleaned state so you start with a clean working tree
+#   4. Removes Squad workflows from .github/workflows/
+#   5. Removes .github/prompts/
+#   6. Removes .copilot/, .squad/, .playwright-mcp/, .gitattributes
+#   7. Removes the git remote "origin" so you don't accidentally push to the template repo
+#   8. Stages and commits the cleaned state so you start with a clean working tree
 #
 # Usage:
 #   .\scripts\clean-start.ps1
@@ -48,7 +51,58 @@ if (Test-Path $SkillsDir) {
     Write-Host "[SKIP] .github/skills/ not found" -ForegroundColor Yellow
 }
 
-# 4. Remove git remote origin
+# 4. Remove Squad GitHub workflows
+$WorkflowsDir = Join-Path $RepoRoot ".github\workflows"
+if (Test-Path $WorkflowsDir) {
+    Remove-Item -Path $WorkflowsDir -Recurse -Force
+    Write-Host "[OK] Removed .github/workflows/" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .github/workflows/ not found" -ForegroundColor Yellow
+}
+
+# 5. Remove .github/prompts
+$PromptsDir = Join-Path $RepoRoot ".github\prompts"
+if (Test-Path $PromptsDir) {
+    Remove-Item -Path $PromptsDir -Recurse -Force
+    Write-Host "[OK] Removed .github/prompts/" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .github/prompts/ not found" -ForegroundColor Yellow
+}
+
+# 6. Remove non-participant top-level directories and files
+$CopilotDir = Join-Path $RepoRoot ".copilot"
+if (Test-Path $CopilotDir) {
+    Remove-Item -Path $CopilotDir -Recurse -Force
+    Write-Host "[OK] Removed .copilot/" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .copilot/ not found" -ForegroundColor Yellow
+}
+
+$SquadDir = Join-Path $RepoRoot ".squad"
+if (Test-Path $SquadDir) {
+    Remove-Item -Path $SquadDir -Recurse -Force
+    Write-Host "[OK] Removed .squad/" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .squad/ not found" -ForegroundColor Yellow
+}
+
+$PlaywrightDir = Join-Path $RepoRoot ".playwright-mcp"
+if (Test-Path $PlaywrightDir) {
+    Remove-Item -Path $PlaywrightDir -Recurse -Force
+    Write-Host "[OK] Removed .playwright-mcp/" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .playwright-mcp/ not found" -ForegroundColor Yellow
+}
+
+$GitattributesFile = Join-Path $RepoRoot ".gitattributes"
+if (Test-Path $GitattributesFile) {
+    Remove-Item -Path $GitattributesFile -Force
+    Write-Host "[OK] Removed .gitattributes" -ForegroundColor Green
+} else {
+    Write-Host "[SKIP] .gitattributes not found" -ForegroundColor Yellow
+}
+
+# 7. Remove git remote origin
 try {
     $RemoteUrl = git -C $RepoRoot remote get-url origin 2>$null
     if ($LASTEXITCODE -eq 0) {
@@ -61,7 +115,7 @@ try {
     Write-Host "[SKIP] No git remote 'origin' found" -ForegroundColor Yellow
 }
 
-# 5. Stage and commit the clean state
+# 8. Stage and commit the clean state
 git -C $RepoRoot add -A
 git -C $RepoRoot commit -m "Clean start: reset for hackathon" --quiet
 Write-Host "[OK] Committed clean state to local repo" -ForegroundColor Green

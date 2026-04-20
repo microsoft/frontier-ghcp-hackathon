@@ -105,6 +105,50 @@ if (Test-Path $SkillsDir) {
     Write-Host "[OK] Removed sample skills from .github/skills/" -ForegroundColor Green
 }
 
+# Remove Squad GitHub workflows (not participant-facing)
+$WorkflowsDir = Join-Path $RepoRoot ".github\workflows"
+if (Test-Path $WorkflowsDir) {
+    Remove-Item -Path $WorkflowsDir -Recurse -Force
+    Write-Host "[OK] Removed .github/workflows/" -ForegroundColor Green
+}
+
+# Remove .github/prompts (template-only artifact)
+$PromptsDir = Join-Path $RepoRoot ".github\prompts"
+if (Test-Path $PromptsDir) {
+    Remove-Item -Path $PromptsDir -Recurse -Force
+    Write-Host "[OK] Removed .github/prompts/" -ForegroundColor Green
+}
+
+# Clean non-participant top-level directories
+
+# Remove .copilot/ (MCP config and Squad skills -- not for participants)
+$CopilotDir = Join-Path $RepoRoot ".copilot"
+if (Test-Path $CopilotDir) {
+    Remove-Item -Path $CopilotDir -Recurse -Force
+    Write-Host "[OK] Removed .copilot/" -ForegroundColor Green
+}
+
+# Remove .squad/ (Squad orchestration state -- not for participants)
+$SquadDir = Join-Path $RepoRoot ".squad"
+if (Test-Path $SquadDir) {
+    Remove-Item -Path $SquadDir -Recurse -Force
+    Write-Host "[OK] Removed .squad/" -ForegroundColor Green
+}
+
+# Remove .playwright-mcp/ (debug logs -- not for participants)
+$PlaywrightDir = Join-Path $RepoRoot ".playwright-mcp"
+if (Test-Path $PlaywrightDir) {
+    Remove-Item -Path $PlaywrightDir -Recurse -Force
+    Write-Host "[OK] Removed .playwright-mcp/" -ForegroundColor Green
+}
+
+# Remove .gitattributes (Squad merge drivers -- not needed)
+$GitattributesFile = Join-Path $RepoRoot ".gitattributes"
+if (Test-Path $GitattributesFile) {
+    Remove-Item -Path $GitattributesFile -Force
+    Write-Host "[OK] Removed .gitattributes" -ForegroundColor Green
+}
+
 try {
     $RemoteUrl = git -C $RepoRoot remote get-url origin 2>$null
     if ($RemoteUrl) {
