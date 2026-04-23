@@ -31,7 +31,9 @@ echo "GnuCOBOL installed successfully:"
 cobc --version | head -1
 
 # Create data directory for ISAM files
-CHALLENGE_DIR="/workspaces/gh-copilot-for-enterprise/challenges/bonus-12-cobol-banking"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+CHALLENGE_DIR="$REPO_ROOT/challenges/bonus-12-cobol-banking"
 mkdir -p "$CHALLENGE_DIR/data"
 
 echo ""
