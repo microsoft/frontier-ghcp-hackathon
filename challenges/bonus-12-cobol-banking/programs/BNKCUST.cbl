@@ -81,7 +81,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM CUST-MENU
+    GOBACK.
 
 *> -------------------------------------------------------
 *> CUST-MENU: Customer Management Menu

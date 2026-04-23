@@ -68,7 +68,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM USER-MANAGEMENT
+    GOBACK.
 
 *> -------------------------------------------------------
 *> LOGIN: Login procedure

@@ -101,7 +101,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM LOAN-MENU
+    GOBACK.
 
 *> -------------------------------------------------------
 *> LOAN-MENU: Loan Management Menu

@@ -51,7 +51,7 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    GOBACK.
 
 *> -------------------------------------------------------
 *> CALC-SAVINGS-INT: Daily interest for savings accounts

@@ -66,7 +66,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM ACCT-MENU
+    GOBACK.
 
 *> -------------------------------------------------------
 *> ACCT-MENU: Account Management Menu

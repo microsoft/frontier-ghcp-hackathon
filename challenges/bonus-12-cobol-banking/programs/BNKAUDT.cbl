@@ -47,7 +47,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM VIEW-LOG
+    GOBACK.
 
 *> -------------------------------------------------------
 *> LOG-ENTRY: Write an audit log entry

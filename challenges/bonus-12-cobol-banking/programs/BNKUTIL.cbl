@@ -47,7 +47,7 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    GOBACK.
 
 *> -------------------------------------------------------
 *> GET-TODAY: Return today's date as YYYYMMDD

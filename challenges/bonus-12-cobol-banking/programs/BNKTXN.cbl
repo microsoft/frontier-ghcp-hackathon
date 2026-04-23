@@ -96,7 +96,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM TXN-MENU
+    GOBACK.
 
 *> -------------------------------------------------------
 *> TXN-MENU: Transaction Menu

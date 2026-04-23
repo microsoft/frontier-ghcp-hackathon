@@ -100,7 +100,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM REPORT-MENU
+    GOBACK.
 
 *> -------------------------------------------------------
 *> REPORT-MENU: Reports Menu

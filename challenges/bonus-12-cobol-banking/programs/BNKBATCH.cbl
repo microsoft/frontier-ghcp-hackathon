@@ -90,7 +90,8 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    STOP RUN.
+    PERFORM RUN-BATCH
+    GOBACK.
 
 *> -------------------------------------------------------
 *> RUN-BATCH: Main batch entry point
