@@ -355,7 +355,8 @@ LIST-USERS.
         " -------------------"
 
     MOVE 0 TO WS-EOF
-    READ USERFILE FIRST
+    START USERFILE FIRST
+    READ USERFILE NEXT
         AT END MOVE 1 TO WS-EOF
     END-READ
 

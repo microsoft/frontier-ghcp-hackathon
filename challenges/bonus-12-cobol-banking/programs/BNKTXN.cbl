@@ -800,7 +800,8 @@ CREDIT-ACCOUNT.
 *> -------------------------------------------------------
 GET-NEXT-TXN-ID.
     MOVE 0 TO WS-EOF
-    READ TXNFILE LAST
+    START TXNFILE LAST
+    READ TXNFILE PREVIOUS
         AT END MOVE 1 TO WS-EOF
     END-READ
     IF WS-EOF = 0

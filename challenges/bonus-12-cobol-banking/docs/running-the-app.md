@@ -27,14 +27,23 @@ You should see `cobc (GnuCOBOL)` followed by a version number. Version 3.1.2 or 
 
 ## Compiling the Programs
 
-From the `challenges/bonus-12-cobol-banking/` directory:
+All commands run from the `challenges/bonus-12-cobol-banking/` directory.
+
+### Step 1: Compile and run the initializer
 
 ```bash
-# Compile the initialization program first
-cobc -x -free -I copybooks -o bnkinit programs/BNKINIT.cbl
+cobc -x -free programs/BNKINIT.cbl
+./BNKINIT
+```
 
-# Compile the main application (links all modules)
-cobc -x -free -I copybooks -o bnkmain programs/BNKMAIN.cbl \
+This creates ISAM data files in `data/` and loads seed data (customers, accounts, transactions, loans, users, and system configuration). It **clears all existing data** and creates fresh records, so only run it when you want a clean slate.
+
+### Step 2: Compile the main application
+
+`BNKMAIN` calls 10 other modules at runtime. All modules must be compiled together so the linker can resolve them:
+
+```bash
+cobc -x -free programs/BNKMAIN.cbl \
     programs/BNKAUTH.cbl programs/BNKCUST.cbl \
     programs/BNKACCT.cbl programs/BNKTXN.cbl \
     programs/BNKLOAN.cbl programs/BNKINTR.cbl \
@@ -42,32 +51,14 @@ cobc -x -free -I copybooks -o bnkmain programs/BNKMAIN.cbl \
     programs/BNKAUDT.cbl programs/BNKUTIL.cbl
 ```
 
-The `-free` flag enables free-format source (no fixed columns). The `-I copybooks` flag tells the compiler where to find `.cpy` copybook files.
+The `-x` flag produces an executable. The `-free` flag enables free-format source (no fixed columns). Copybook paths in the source use relative paths (`copybooks/*.cpy`), so no `-I` flag is needed as long as you compile from the challenge root directory.
 
-If you want to compile each program as a standalone module:
+If you only run `cobc -x -free programs/BNKMAIN.cbl` without the other modules, you will get `module 'BNKAUTH' not found` at runtime.
 
-```bash
-for f in programs/*.cbl; do
-    cobc -free -I copybooks -c "$f"
-done
-```
-
-## Initializing the Database
-
-Run the initialization program to create all ISAM data files and load seed data:
+### Step 3: Run the application
 
 ```bash
-./bnkinit
-```
-
-This creates files in the `data/` directory. The seed data includes customers, accounts, transactions, loans, users, and system configuration -- the same data as the MUMPS version.
-
-This step **clears all existing data** and creates fresh records. Only run it when you want a clean slate.
-
-## Starting the Application
-
-```bash
-./bnkmain
+./BNKMAIN
 ```
 
 This launches the main menu. Log in with one of the default accounts:
@@ -97,10 +88,12 @@ Type `Q` at the main menu to log out and exit.
 
 **"cobc: command not found"** -- GnuCOBOL is not installed. See Prerequisites above.
 
-**Compilation errors about copybooks** -- Make sure you include `-I copybooks` in the compile command so the compiler can find the `.cpy` files.
+**Compilation errors about copybooks** -- Make sure you are running the compile command from the `challenges/bonus-12-cobol-banking/` directory so the relative `copybooks/` paths resolve correctly.
 
-**"file not found" at runtime** -- The `data/` directory must exist. Run `mkdir -p data` if it is missing, then run `./bnkinit` to create the ISAM files.
+**"file not found" at runtime** -- The `data/` directory must exist. Run `mkdir -p data` if it is missing, then run `./BNKINIT` to create the ISAM files.
 
-**"BNKINIT already loaded" or stale data** -- Run `./bnkinit` again to reset everything. This is destructive -- it wipes all data files and reloads seed data.
+**"module 'BNKAUTH' not found"** -- You compiled BNKMAIN without linking the other modules. See Step 2 above for the full compile command.
+
+**"BNKINIT already loaded" or stale data** -- Run `./BNKINIT` again to reset everything. This is destructive -- it wipes all data files and reloads seed data.
 
 **Garbled terminal output** -- Some terminals handle the DISPLAY output differently. Make sure your terminal supports standard COBOL console I/O. If columns look off, widen your terminal to at least 120 characters.
