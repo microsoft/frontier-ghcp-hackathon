@@ -2,7 +2,7 @@
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **7 core tracks** and **11 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
+Welcome to the GitHub Copilot Enterprise 1-Day Hackathon! This repository contains **7 core tracks** and **12 bonus tracks** with hands-on challenges that teach your team how to use GitHub Copilot effectively.
 
 ## Hackathon Overview
 
@@ -27,6 +27,7 @@ This hackathon is organized into **role-based tracks** for different team types,
 - 📝 **[Bonus: Backlog Generator](./tracks/bonus-backlog-generator-track.md)** - Convert requirement specs into structured backlogs with MCP
 - 🖥️ **[Bonus: Ops Assistant](./tracks/bonus-ops-assistant-track.md)** - Build AI-assisted log analysis, incident routing, and ops tooling
 - 🚀 **[Bonus: Spec-to-Ship Accelerator](./tracks/bonus-spec-to-ship-track.md)** - Full lifecycle from functional spec to deployed code
+- 🏗️ **[Bonus: COBOL Banking Modernization](./tracks/bonus-cobol-modernization-track.md)** - Reverse-engineer and modernize a COBOL banking system into a full-stack web app
 - 🤖 **[Agentic Workflows Track](./tracks/agentic-workflows-track.md)** - Build AI-powered repository automation with GitHub Agentic Workflows
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
@@ -348,6 +349,17 @@ Build AI-assisted operations tooling for the Order Gateway -- a critical e-comme
 **Copilot Focus**: End-to-end prompt chain -- spec to backlog to technical analysis to code to tests to CI pipeline, custom agents for test specification
 
 Compress the full development lifecycle for a billing module on an existing multi-tenant SaaS platform. Start with a functional requirements document and an existing tenant management API. Build prompts that convert the spec into work items, generate a technical analysis against the existing codebase, implement the billing module from generated stories, create test specifications with a custom agent, and wire up a CI pipeline -- all producing reusable Copilot artifacts.
+
+---
+
+### [Bonus 12: COBOL Banking Modernization](./challenges/bonus-12-cobol-banking/) ([Track](./tracks/bonus-cobol-modernization-track.md))
+
+**Team**: Solo or pair (any developer role)
+**Duration**: 8-12 hours (Advanced)
+**Skills**: COBOL (no prior experience needed), Node.js/TypeScript or Java, React, reverse engineering, testing
+**Copilot Focus**: Legacy code comprehension with `/explain`, cross-language translation, characterization test generation, full-stack modernization
+
+Reverse-engineer and modernize a core banking system written in COBOL -- the language that still runs the majority of the world's banking transactions. The system handles customer management, deposit accounts, teller transactions, consumer loans, interest calculation, and end-of-day batch processing. Understand the code, build characterization tests, extend it with new features, and translate it into a modern React + Node.js/Java web application while preserving every business rule.
 
 ---
 

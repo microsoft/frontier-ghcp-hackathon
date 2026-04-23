@@ -313,6 +313,7 @@ Completed your main track? These advanced tracks go deeper.
 | 📝 **Bonus: Backlog Generator** | ⭐⭐ | 6-8h | Prompts, Agents, Atlassian MCP | Bonus 9 |
 | 🖥️ **Bonus: Ops Assistant** | ⭐⭐ | 6-8h | Prompts, Agents, Node.js | Bonus 10 |
 | 🚀 **Bonus: Spec-to-Ship** | ⭐⭐⭐ | 6-8h | Node.js, Prompts, Agents, GitHub Actions | Bonus 11 |
+| 🏗️ **Bonus: COBOL Modernization** | ⭐⭐⭐ | 8-12h | COBOL, Node.js/Java, React, testing | Bonus 12 |
 
 ## What You'll Learn in Every Track
 
