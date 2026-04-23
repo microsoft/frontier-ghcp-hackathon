@@ -45,9 +45,26 @@ WORKING-STORAGE SECTION.
 01  WS-DATETIME-STR        PIC X(19).
 01  WS-TODAY-STR            PIC 9(8).
 
+LINKAGE SECTION.
+01  LS-AUDIT-USER          PIC X(20).
+01  LS-AUDIT-ACTION        PIC X(15).
+01  LS-AUDIT-DETAIL        PIC X(200).
+
 PROCEDURE DIVISION.
 MAIN-PARA.
     PERFORM VIEW-LOG
+    GOBACK.
+
+*> -------------------------------------------------------
+*> BNKLOG: Entry point for writing audit entries from
+*> other programs via CALL "BNKLOG"
+*> -------------------------------------------------------
+ENTRY "BNKLOG" USING LS-AUDIT-USER LS-AUDIT-ACTION
+    LS-AUDIT-DETAIL.
+    MOVE LS-AUDIT-USER   TO AUDIT-USER
+    MOVE LS-AUDIT-ACTION TO AUDIT-ACTION
+    MOVE LS-AUDIT-DETAIL TO AUDIT-DETAIL
+    PERFORM LOG-ENTRY
     GOBACK.
 
 *> -------------------------------------------------------

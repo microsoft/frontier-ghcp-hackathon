@@ -23,6 +23,13 @@ WORKING-STORAGE SECTION.
 01  WS-IS-ADMIN            PIC X(1).
 01  WS-IS-TELLER           PIC X(1).
 
+*> Session data passed to/from BNKAUTH via LINKAGE
+01  WS-LOGIN-SESSION.
+    05  WS-SESS-LOGGED-IN  PIC 9(1).
+    05  WS-SESS-USER       PIC X(20).
+    05  WS-SESS-NAME       PIC X(40).
+    05  WS-SESS-ROLE       PIC X(10).
+
 01  WS-CURRENT-DT.
     05  WS-NOW-YEAR        PIC 9(4).
     05  WS-NOW-MONTH       PIC 9(2).
@@ -35,12 +42,14 @@ WORKING-STORAGE SECTION.
 
 PROCEDURE DIVISION.
 MAIN-PARA.
-    *> Authenticate user
-    CALL "BNKAUTH"
-    *> In standalone mode, call the login procedure directly
-    *> The login sets WS-LOGGED-IN, WS-BNKUSER, etc.
+    *> Authenticate user via BNKAUTH login entry point
+    MOVE 0 TO WS-SESS-LOGGED-IN
+    CALL "BNKLOGIN" USING WS-LOGIN-SESSION
+    MOVE WS-SESS-LOGGED-IN TO WS-LOGGED-IN
+    MOVE WS-SESS-USER      TO WS-BNKUSER
+    MOVE WS-SESS-NAME      TO WS-BNKUSNM
+    MOVE WS-SESS-ROLE      TO WS-BNKROLE
 
-    PERFORM LOGIN-SEQUENCE
     IF WS-LOGGED-IN = 0
         DISPLAY "Authentication failed."
         STOP RUN
@@ -59,25 +68,6 @@ MAIN-PARA.
 
     DISPLAY "Goodbye, " FUNCTION TRIM(WS-BNKUSNM) "."
     STOP RUN.
-
-*> -------------------------------------------------------
-*> LOGIN-SEQUENCE: Handle login (placeholder for BNKAUTH)
-*> In integrated build, CALL "BNKAUTH" handles this
-*> -------------------------------------------------------
-LOGIN-SEQUENCE.
-    DISPLAY " "
-    DISPLAY "=== First National Bank - Login ==="
-    DISPLAY "User ID: " WITH NO ADVANCING
-    ACCEPT WS-BNKUSER
-    IF WS-BNKUSER = SPACES
-        EXIT PARAGRAPH
-    END-IF
-    DISPLAY "Password: " WITH NO ADVANCING
-    ACCEPT WS-INPUT
-    *> Placeholder: real auth handled by BNKAUTH module
-    MOVE 1 TO WS-LOGGED-IN
-    MOVE "System Administrator" TO WS-BNKUSNM
-    MOVE "ADMIN" TO WS-BNKROLE.
 
 *> -------------------------------------------------------
 *> MAIN-MENU: Display and process main menu

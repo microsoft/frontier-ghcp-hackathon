@@ -66,9 +66,28 @@ WORKING-STORAGE SECTION.
 01  WS-AUDIT-ACTION        PIC X(15).
 01  WS-AUDIT-DETAIL        PIC X(200).
 
+LINKAGE SECTION.
+01  LS-SESSION.
+    05  LS-LOGGED-IN       PIC 9(1).
+    05  LS-BNKUSER         PIC X(20).
+    05  LS-BNKUSNM         PIC X(40).
+    05  LS-BNKROLE         PIC X(10).
+
 PROCEDURE DIVISION.
 MAIN-PARA.
     PERFORM USER-MANAGEMENT
+    GOBACK.
+
+*> -------------------------------------------------------
+*> BNKLOGIN: Entry point for login from BNKMAIN
+*> Receives and returns session data via LINKAGE
+*> -------------------------------------------------------
+ENTRY "BNKLOGIN" USING LS-SESSION.
+    PERFORM LOGIN
+    MOVE WS-LOGGED-IN TO LS-LOGGED-IN
+    MOVE WS-BNKUSER   TO LS-BNKUSER
+    MOVE WS-BNKUSNM   TO LS-BNKUSNM
+    MOVE WS-BNKROLE   TO LS-BNKROLE
     GOBACK.
 
 *> -------------------------------------------------------
@@ -558,8 +577,5 @@ BUILD-DATETIME.
 *> WRITE-AUDIT: Bridge to audit module
 *> -------------------------------------------------------
 WRITE-AUDIT.
-    CONTINUE.
-    *> In integrated build, this calls BNKAUDT LOG-ENTRY
-    *> For now, display to console as fallback
-    *> CALL "BNKAUDT" USING WS-AUDIT-USER
-    *>     WS-AUDIT-ACTION WS-AUDIT-DETAIL
+    CALL "BNKLOG" USING WS-AUDIT-USER
+        WS-AUDIT-ACTION WS-AUDIT-DETAIL.
