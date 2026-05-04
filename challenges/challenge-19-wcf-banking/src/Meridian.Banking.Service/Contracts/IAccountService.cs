@@ -1,4 +1,4 @@
-using System.ServiceModel;
+using CoreWCF;
 using Meridian.Banking.Service.Models;
 
 namespace Meridian.Banking.Service.Contracts;
