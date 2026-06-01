@@ -14,3 +14,18 @@
 ## Learnings
 
 📌 Correction note (2026-04-28): The repo now uses a single numbered challenge sequence through Challenge 18. Any older references to bonus tracks or bonus challenges in this history are historical only and should not be used for current work.
+
+## Learnings
+
+### 2026-06-01 -- MkDocs nav full expansion (GitHub Pages)
+- `docs/tracks` is a SYMLINK to `../tracks`. Plain `find docs/tracks` returns nothing; must use `find -L docs/tracks` to follow the symlink when enumerating sub-pages.
+- Nav nesting convention adopted for every challenge that has sub-pages:
+  - Challenge becomes a nav SECTION. First child is `Overview:` -> the main `*-track.md` page.
+  - Stage challenges (0,1,2,3,4,5,6,20): Overview + `Stage N - Title` in numeric order.
+  - Single-phase challenges (7,8,11-19): Overview + `Phase N - Title` in numeric order.
+  - Sprint challenges (9,10): Overview + each phase as a nested sub-section (Overview + role pages).
+  - Role order, sprint phases: Product Owner, Business Analyst, Frontend Developer, Backend Developer, QA Engineer, DevOps Engineer. Challenge 10 has no PO/BA, so it starts at Frontend Developer.
+- Titles use single ` - ` separator to match the existing nav style ("Challenge 0 - Product Planning"), NOT em-dash and NOT `--`. Titles derived from filenames/H1, kept concise.
+- Added challenges 19 and 20 (were on disk but missing from nav entirely) + `tracks/TRACK_STRUCTURE.md` (as top-level "Track Structure").
+- Count: 168 track .md files, all now in nav exactly once; 147 of them newly added.
+- Verify with `. .venv-docs/bin/activate && mkdocs build --strict`. Strict FAILS on warnings (bad paths), but "not in nav" messages are INFO-level and do NOT fail strict. Leftover INFO entries are `challenges/**` starter materials and a nested `docs/docs/` mirror -- intentionally NOT in site nav (exercise files, not docs). Build must stay exit 0 / warning-free.

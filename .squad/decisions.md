@@ -2,6 +2,21 @@
 
 ## Active Decisions
 
+### 2026-06-01: MkDocs nav nesting convention for track sub-pages
+
+**By:** Danny (Lead), requested by Marco Olivo
+
+**What:** Every challenge track in `mkdocs.yml` `nav:` that has sub-pages is expanded into a nav SECTION rather than a single link. The section's first entry is always `Overview:` pointing to the main `tracks/challenge-N-...-track.md` page. Then:
+- Stage-based challenges (0,1,2,3,4,5,6,20): list `Stage N - <Title>` entries in numeric order.
+- Single-file phase challenges (7,8,11-19): list `Phase N - <Title>` entries in numeric order.
+- Sprint challenges (9 and 10): each phase is itself a nested sub-section containing an `Overview:` (the `phase-*.md` file) plus the per-role pages. Role order is fixed: Product Owner, Business Analyst, Frontend Developer, Backend Developer, QA Engineer, DevOps Engineer (Challenge 10 omits PO/BA).
+
+**Title rules:** Single ` - ` separator (matches existing "Challenge N - Title" style), no em-dashes, no emoji, concise human titles derived from filename or H1.
+
+**Verification:** `docs/tracks` is a symlink to `tracks/`; enumerate with `find -L docs/tracks -name '*.md'`. Every track page must appear in nav exactly once. Confirm with `. .venv-docs/bin/activate && mkdocs build --strict` -> must exit 0 with no warnings.
+
+**Why:** User wants all per-stage/per-phase/per-role pages browsable on the GitHub Pages site, not just top-level track pages. Future track additions must follow this nesting + ordering convention and re-run the strict build before merging.
+
 ### 2026-06-01: GitHub Pages docs use Material for MkDocs
 
 **By:** Basher (DevOps), requested by Marco Olivo
