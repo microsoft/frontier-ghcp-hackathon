@@ -2,6 +2,18 @@
 
 ## Active Decisions
 
+### 2026-06-01: GitHub Pages docs use Material for MkDocs
+
+**By:** Basher (DevOps), requested by Marco Olivo
+
+**What:** Upgraded the docs site from the plain default MkDocs theme to Material for MkDocs (navigation tabs/sections/top, light/dark palette toggle, search suggest/highlight, code copy) so the published GitHub Pages site renders tracks, challenges, and guides as a polished, navigable website. Pinned `mkdocs-material==9.5.49`, `pymdown-extensions==10.14`, and `pygments==2.18.0` in `requirements-docs.txt`. The existing `.github/workflows/deploy-docs.yml` is unchanged. `mkdocs build --strict` passes (exit 0).
+
+**Why:** The pygments pin is mandatory — pymdown-extensions 10.14 passes `filename=None` for untitled code blocks and pygments 2.19+ crashes in `html.escape` on that, breaking the strict build in CI. `pygments==2.18.0` is the last release that handles it.
+
+**Supersedes:** The theme choice in the 2026-04-28 "MkDocs and GitHub Pages docs publishing shape" decision — plain default theme replaced by Material. The build command (`mkdocs build --strict`), dependency manifest, and dedicated Pages workflow remain as decided there.
+
+**Manual step (owner action required):** Set GitHub → Settings → Pages → Source = "GitHub Actions" once in the UI. This cannot be configured from code.
+
 ### 2026-05-04: Challenge 19 uses CoreWCF on .NET 8 (not classic WCF/.NET Framework)
 
 **By:** Linus, Basher (via Coordinator)
