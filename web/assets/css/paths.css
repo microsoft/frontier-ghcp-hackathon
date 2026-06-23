@@ -92,7 +92,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: var(--c-gold);
+  color: var(--c-accent);
   font-size: 0.9rem;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .challenge-list a:hover {
-  color: var(--c-gold);
+  color: var(--c-accent);
   text-decoration: underline;
 }
 
@@ -135,7 +135,7 @@
 }
 
 .share-input:focus {
-  border-color: var(--c-gold);
+  border-color: var(--c-accent);
 }
 
 .sr-only {

@@ -51,14 +51,14 @@
 
 .guide-link:hover {
   background: var(--c-700);
-  color: var(--c-gold);
+  color: var(--c-accent);
 }
 
 .guide-link.active {
   background: var(--c-700);
-  color: var(--c-gold);
+  color: var(--c-accent);
   font-weight: 600;
-  border-left: 3px solid var(--c-gold);
+  border-left: 3px solid var(--c-accent);
   padding-left: 11px;
 }
 
@@ -111,13 +111,13 @@
 }
 
 .guide-content a {
-  color: var(--c-gold);
+  color: var(--c-accent);
   text-decoration: underline;
   transition: color 0.18s ease;
 }
 
 .guide-content a:hover {
-  color: var(--c-gold-dim);
+  color: var(--c-accent-dim);
 }
 
 .guide-content ul,
@@ -146,7 +146,7 @@
   background: var(--c-800);
   padding: 2px 6px;
   border-radius: 4px;
-  color: var(--c-gold);
+  color: var(--c-accent);
 }
 
 .guide-content pre code {
@@ -156,7 +156,7 @@
 }
 
 .guide-content blockquote {
-  border-left: 4px solid var(--c-gold);
+  border-left: 4px solid var(--c-accent);
   padding-left: 20px;
   margin: 20px 0;
   color: var(--c-dim);
@@ -215,7 +215,7 @@
 
   .guide-link.active {
     border-left: none;
-    border-bottom: 3px solid var(--c-gold);
+    border-bottom: 3px solid var(--c-accent);
     padding-left: 12px;
     padding-bottom: 5px;
   }

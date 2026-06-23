@@ -33,7 +33,7 @@
       'workflow-automation': 'var(--c-automation)',
       'azure-platform': 'var(--c-azure)',
     };
-    return map[categoryId] || 'var(--c-gold)';
+    return map[categoryId] || 'var(--c-accent)';
   };
 
   FP.categoryName = function (categoryId, categories) {

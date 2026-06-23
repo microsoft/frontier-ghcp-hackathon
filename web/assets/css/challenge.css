@@ -174,7 +174,7 @@
 }
 
 .ch-guide blockquote {
-  border-left: 3px solid var(--cat-color, var(--c-gold));
+  border-left: 3px solid var(--cat-color, var(--c-accent));
   padding-left: 1.25rem;
   margin: 1.25em 0;
   color: var(--c-text-dim);
