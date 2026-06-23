@@ -31,6 +31,15 @@ The `assets/data/` directory is generated and git-ignored.
 
 Copy the `<header>` and `<footer>` from `index.html` verbatim into every page. Load `core.js` first, then your page script.
 
+## Cache busting
+
+Local CSS and JS includes carry a `?v=N` query string (for example `core.js?v=2`). Static
+hosts ignore the query and serve the file, but browsers treat each version as a separate
+cache entry. When you change a shared asset (`core.js`, `styles.css`) or any page script,
+bump the `?v=N` value on the affected includes across all pages. This prevents a new page
+script from pairing with a stale cached `core.js`, which throws a runtime error such as
+`FP.outcomeBadges is not a function`.
+
 ## FP API
 
 `window.FP` provides:
@@ -39,7 +48,7 @@ Copy the `<header>` and `<footer>` from `index.html` verbatim into every page. L
 - `FP.loadPaths()` → Promise(paths.json), cached
 - `FP.categoryColor(id)`, `FP.categoryName(id, categories)` → category utilities
 - `FP.challengeUrl(id)`, `FP.catalogUrl(catId)`, `FP.guideUrl(slug)`, `FP.setUrl(ids, name)` → URL builders
-- `FP.diffBadge(d)`, `FP.durBadge(mins)`, `FP.tagBadges(tags, limit)` → badge generators
+- `FP.diffBadge(d)`, `FP.durBadge(mins)`, `FP.tagBadges(tags, limit)`, `FP.outcomeBadges(ids, outcomeConfig)` → badge generators
 - `FP.kioskParams()`, `FP.isKiosk()`, `FP.applyKiosk()`, `FP.kioskChallengeUrl(id, params)` → kiosk mode
 - `FP.initTheme()`, `FP.initNav()`, `FP.initReveal()`, `FP.renderError(el, msg)` → UI init
 - `FP.renderMd(raw, el)`, `FP.renderInlineMd(raw)` → markdown rendering
