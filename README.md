@@ -127,8 +127,8 @@ See the **[BYOC Kit README](./byoc/README.md)** for the end-to-end flow and a wo
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/martaldsantos/gh-copilot-for-enterprise.git
-   cd gh-copilot-for-enterprise
+   git clone https://github.com/microsoft/frontier-ghcp-hackathon.git
+   cd frontier-ghcp-hackathon
    ```
 
 2. Open the folder in VS Code.

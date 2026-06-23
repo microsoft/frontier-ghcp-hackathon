@@ -94,7 +94,7 @@
     // Starter link
     const starterLink = document.getElementById('starterLink');
     if (starterLink && c.starter_path) {
-      const repoUrl = 'https://github.com/marcoolivo/frontier-ghcp-hackathon';
+      const repoUrl = 'https://github.com/microsoft/frontier-ghcp-hackathon';
       starterLink.href = repoUrl + '/tree/main/' + c.starter_path;
       starterLink.target = '_blank';
       starterLink.rel = 'noopener';
