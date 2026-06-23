@@ -87,3 +87,6 @@ Thumbs.db
 .squad/sessions/
 # Squad: SubSquad activation file (local to this machine)
 .squad-workstream
+
+# Generated data (rebuilt by web/build.js)
+web/assets/data/

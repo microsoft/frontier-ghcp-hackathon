@@ -1,0 +1,290 @@
+/* GitHub Copilot Enterprise Hackathon — challenge detail page styles */
+
+.ch-hero {
+  background: var(--c-card);
+  border-bottom: 1px solid var(--c-border);
+  padding: 2.5rem 0 2rem;
+}
+
+.ch-hero h1 {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  margin: 0.75rem 0 1rem;
+  font-weight: 700;
+}
+
+.ch-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.ch-focus {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--c-text-dim);
+  max-width: 680px;
+  margin: 0;
+}
+
+.ch-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .ch-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .ch-sidebar {
+    order: 1;
+  }
+  .ch-main {
+    order: 2;
+  }
+}
+
+.ch-main {
+  min-width: 0;
+}
+
+.ch-sidebar {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ch-info-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--c-faint);
+  font-weight: 600;
+}
+
+.info-value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ch-guide {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  padding: 2rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.ch-guide h1,
+.ch-guide h2,
+.ch-guide h3 {
+  margin-top: 1.75em;
+  margin-bottom: 0.75em;
+  line-height: 1.25;
+}
+
+.ch-guide h1:first-child,
+.ch-guide h2:first-child,
+.ch-guide h3:first-child {
+  margin-top: 0;
+}
+
+.ch-guide h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--c-border);
+  padding-bottom: 0.5rem;
+}
+
+.ch-guide h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.ch-guide h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.ch-guide p {
+  margin: 1em 0;
+}
+
+.ch-guide ul,
+.ch-guide ol {
+  margin: 1em 0;
+  padding-left: 1.75em;
+}
+
+.ch-guide li {
+  margin: 0.5em 0;
+}
+
+.ch-guide code {
+  background: var(--c-bg);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: var(--font-mono);
+  border: 1px solid var(--c-border);
+}
+
+.ch-guide pre {
+  background: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.25em 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.ch-guide pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.ch-guide blockquote {
+  border-left: 3px solid var(--cat-color, var(--c-gold));
+  padding-left: 1.25rem;
+  margin: 1.25em 0;
+  color: var(--c-text-dim);
+  font-style: italic;
+}
+
+.ch-guide a {
+  color: var(--c-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.ch-guide a:hover {
+  border-bottom-color: var(--c-primary);
+}
+
+.ch-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25em 0;
+  font-size: 0.9rem;
+}
+
+.ch-guide th,
+.ch-guide td {
+  border: 1px solid var(--c-border);
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+
+.ch-guide th {
+  background: var(--c-bg);
+  font-weight: 600;
+}
+
+.ch-guide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1.25em 0;
+}
+
+.panel {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.panel-head {
+  padding: 0.9rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+}
+
+.panel-body {
+  padding: 1.1rem;
+}
+
+.prereq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prereq-item {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.prereq-item:last-child {
+  border-bottom: none;
+}
+
+.prereq-item a {
+  color: var(--c-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.prereq-item a:hover {
+  color: var(--c-primary);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--c-faint);
+  margin-bottom: 0.75rem;
+}
+
+.breadcrumbs a {
+  color: var(--c-text-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: var(--c-text);
+}
+
+.breadcrumbs span {
+  color: var(--c-faint);
+}

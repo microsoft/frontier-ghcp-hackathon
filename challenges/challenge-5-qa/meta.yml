@@ -1,0 +1,16 @@
+id: challenge-5
+number: 5
+title: QA & Testing
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 420
+description: Test real applications through test planning, exploratory testing, automation, and debugging with GitHub Copilot.
+focus: Using GitHub Copilot to test a real application -- test planning, test generation, debugging, and reporting
+tags:
+  - core-tracks
+  - core
+  - qa
+  - testing
+prerequisites: []
+track_url: tracks/challenge-5-qa-track.md
+starter_path: challenges/challenge-5-qa/

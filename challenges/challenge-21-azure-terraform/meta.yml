@@ -1,0 +1,16 @@
+id: challenge-21
+number: 21
+title: Azure Terraform
+category: azure-platform
+difficulty: intermediate
+duration_minutes: 300
+description: Build and defend an Azure platform baseline with Terraform using remote state, modules, identity, policy, and CI guardrails.
+focus: Building and defending an Azure platform baseline with Terraform -- remote state, reusable modules, identity, policy checks, CI guardrails, and plan review discipline
+tags:
+  - azure-platform
+  - advanced
+  - azure
+  - terraform
+prerequisites: []
+track_url: tracks/challenge-21-azure-terraform-track.md
+starter_path: challenges/challenge-21-azure-terraform/

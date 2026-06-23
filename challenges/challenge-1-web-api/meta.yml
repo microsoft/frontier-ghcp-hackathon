@@ -1,0 +1,15 @@
+id: challenge-1
+number: 1
+title: Web API
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 420
+description: Build APIs and backend services with authentication, persistence, and testing using GitHub Copilot.
+focus: Building APIs and backend services with GitHub Copilot
+tags:
+  - core-tracks
+  - core
+  - api
+prerequisites: []
+track_url: tracks/challenge-1-web-api-track.md
+starter_path: challenges/challenge-1-web-api/

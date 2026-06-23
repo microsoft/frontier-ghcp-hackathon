@@ -1,0 +1,17 @@
+id: challenge-18
+number: 18
+title: Legacy COBOL Banking Modernization
+category: legacy-modernization
+difficulty: advanced
+duration_minutes: 600
+description: Reverse-engineer a COBOL banking system and rebuild it as a modern web application with GitHub Copilot.
+focus: Legacy code comprehension, characterization testing, feature evolution, and full-stack modernization -- using GitHub Copilot to reverse-engineer a COBOL banking system and rebuild it as a modern web application
+tags:
+  - legacy-modernization
+  - advanced
+  - cobol
+  - legacy
+  - testing
+prerequisites: []
+track_url: tracks/challenge-18-cobol-modernization-track.md
+starter_path: challenges/challenge-18-cobol-banking/

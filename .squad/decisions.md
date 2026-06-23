@@ -91,6 +91,49 @@
 
 **Why:** The repository already uses the renumbered Challenge 0 through Challenge 18 structure. Keeping squad metadata on the old split causes avoidable drift when agents describe project scope or challenge paths.
 
+### 2026-06-23: Bespoke site architecture replacing MkDocs
+
+**By:** Marco, decided by Linus (foundation), Rusty (data), Basher (infra)
+
+**What:** Migrated the GitHub Pages site from MkDocs (Python build, CLI workflow) to a bespoke Node.js static site consuming challenge metadata as sources of truth. The architecture includes:
+
+- `web/build.js` — dependency-free Node build script reading `challenges/*/meta.yml` and `learning-paths.json`, transforming to `platform.json`, `paths.json`, and challenge guides
+- `web/assets/js/core.js` — locked FP API providing data loading, URL builders, badge generators, kiosk mode support (consumed by all page scripts without modification)
+- `web/assets/css/styles.css` — 5-category color scheme (core-tracks, team-sprints, legacy-modernization, workflow-automation, azure-platform) with utility classes
+- Shared header/footer shell in `web/index.html` + `web/assets/js/home.js` (copied verbatim by all other pages)
+- 22 `meta.yml` files (one per challenge): category, difficulty (beginner/intermediate/advanced), duration (minutes), prerequisites, tags
+- 8 learning paths in `learning-paths.json` (Core Developer Journey, Full-Stack Mastery, Legacy Modernization, Automation Excellence, Team Collaboration, AI & ML Development, Azure Infrastructure, Advanced Workflows)
+- New `.github/workflows/deploy-site.yml` workflow (triggers on push to main + workflow_dispatch, runs build.js, deploys from web/ to GitHub Pages)
+- Deleted MkDocs infrastructure: `mkdocs.yml`, `requirements-docs.txt`, `site/`, `scripts/generate-challenge-catalog.py`, old curator pages/assets in docs/
+- Kept consumed pages: `docs/copilot-guide.md`, `docs/prompt-engineering.md`, `docs/mcp-servers.md`, `docs/images/`, `FACILITATOR_GUIDE.md`, `TROUBLESHOOTING.md`, `tracks/getting-started.md`
+
+**Pages implemented:**
+- Catalog (`catalog.html`/`catalog.js`) — filterable, searchable access to 22 challenges, deep links via ?cat=<id> and ?difficulty=<level>
+- Challenge detail (`challenge.html`/`challenge.js`/`challenge.css`) — renders challenge hero, metadata, prerequisites, guide content; kiosk-aware (preserves ?set param on internal links)
+- Builder (`builder.html`/`builder.js`) — coaches multi-select challenges by category/difficulty/search, generate shareable student set URL via FP.setUrl()
+- Student set view (`set.html`/`set.js`) — displays curated challenges from ?ids=comma-separated, auto-enters kiosk mode (hides nav, injects exit button)
+- Learning paths (`paths.html`/`paths.js`/`paths.css`) — displays 8 curated paths with challenge lists and share-as-set controls
+- Guides (`guide.html`/`guide.js`/`guide.css`) — renders markdown pages (?p=<slug>) with sidebar navigation
+
+**Category mappings:** "Core tracks" → core-tracks (0-8), "Team sprints" → team-sprints (9-10), "Legacy modernization" → legacy-modernization (11,12,18,19), "Workflow automation" → workflow-automation (13-17,20), "Azure platform" → azure-platform (21)
+
+**Difficulty mappings:** ⭐ → beginner, ⭐⭐ → intermediate, ⭐⭐⭐+ → advanced; progressive ranges rounded to representative level
+
+**Duration mappings:** 4-6h → 300min, 6-8h → 420min, 6-10h → 480min, 8-10h → 540min, 8-12h → 600min
+
+**Why:** The MkDocs static generation step was slow and tightly coupled to documentation structure. A bespoke build allows us to:
+- Use challenge metadata as single source of truth (no duplication across mkdocs.yml and challenge folders)
+- Generate multiple static sites (catalog, builder, guides) from one data set
+- Implement student set feature (coaches create custom challenge collections, students see locked views) without complex MkDocs plugins
+- Migrate to Azure-backed deployment in the future without changing the local development workflow
+- Speed up the build process (no mkdocs virtualenv or CLI overhead)
+
+**Verification:** Build passes (22 challenges, 5 categories, 8 learning paths), all 9 JavaScript files pass `node --check`, Markdownlint 0 errors, no dangling MkDocs references, Azure-only references maintained.
+
+**Pre-existing issues flagged (out of scope):** Challenges 1, 2, 11, 18, 19 have folder/track/devcontainer naming mismatches. Recommended for future Gentry/Marco resolution to standardize naming conventions.
+
+**Manual step (owner action required):** Set GitHub → Settings → Pages → Source = "GitHub Actions" once in the UI (if not already done).
+
 ## Governance
 
 - All meaningful changes require team consensus

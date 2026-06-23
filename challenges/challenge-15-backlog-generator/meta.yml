@@ -1,0 +1,15 @@
+id: challenge-15
+number: 15
+title: Backlog Generator
+category: workflow-automation
+difficulty: intermediate
+duration_minutes: 420
+description: Automate the conversion of requirement specs into structured backlogs using Copilot and the Atlassian MCP server.
+focus: Automating the conversion of requirement specifications into structured project backlogs using Copilot prompts, agents, and the Atlassian MCP server
+tags:
+  - workflow-automation
+  - advanced
+  - backlog
+prerequisites: []
+track_url: tracks/challenge-15-backlog-generator-track.md
+starter_path: challenges/challenge-15-backlog-generator/

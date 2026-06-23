@@ -1,0 +1,15 @@
+id: challenge-4
+number: 4
+title: Frontend
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 420
+description: Build modern, interactive React user interfaces with TypeScript, state management, and accessibility using GitHub Copilot.
+focus: Building modern, interactive user interfaces with GitHub Copilot
+tags:
+  - core-tracks
+  - core
+  - frontend
+prerequisites: []
+track_url: tracks/challenge-4-frontend-track.md
+starter_path: challenges/challenge-4-frontend/

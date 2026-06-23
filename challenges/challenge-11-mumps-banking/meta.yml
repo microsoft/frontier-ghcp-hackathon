@@ -1,0 +1,17 @@
+id: challenge-11
+number: 11
+title: Legacy MUMPS Modernization
+category: legacy-modernization
+difficulty: advanced
+duration_minutes: 600
+description: Reverse-engineer and modernize legacy MUMPS code through comprehension, characterization testing, and language translation with GitHub Copilot.
+focus: Legacy code comprehension, characterization testing, feature evolution, and language translation -- using GitHub Copilot to tame a codebase most developers have never seen
+tags:
+  - legacy-modernization
+  - advanced
+  - legacy
+  - mumps
+  - testing
+prerequisites: []
+track_url: tracks/challenge-11-mumps-modernization-track.md
+starter_path: challenges/challenge-11-mumps-banking/

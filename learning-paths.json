@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "paths": [
+    {
+      "id": "core-developer-journey",
+      "name": "Core Developer Journey",
+      "description": "Start here. Plan, build, ship, and test a service end to end with Copilot.",
+      "challenge_ids": [
+        "challenge-0",
+        "challenge-1",
+        "challenge-2",
+        "challenge-3",
+        "challenge-4"
+      ]
+    },
+    {
+      "id": "full-stack-mastery",
+      "name": "Full-Stack Mastery",
+      "description": "Connect a backend API, a frontend, and a QA suite into one working product.",
+      "challenge_ids": [
+        "challenge-1",
+        "challenge-4",
+        "challenge-5",
+        "challenge-8"
+      ]
+    },
+    {
+      "id": "legacy-modernization",
+      "name": "Legacy Modernization",
+      "description": "Modernize MUMPS, COBOL, and WCF banking systems with Copilot as the guide.",
+      "challenge_ids": [
+        "challenge-11",
+        "challenge-12",
+        "challenge-18",
+        "challenge-19"
+      ]
+    },
+    {
+      "id": "automation-excellence",
+      "name": "Automation Excellence",
+      "description": "Turn manual delivery work into repeatable Copilot-driven workflows.",
+      "challenge_ids": [
+        "challenge-13",
+        "challenge-14",
+        "challenge-15",
+        "challenge-16",
+        "challenge-17"
+      ]
+    },
+    {
+      "id": "team-collaboration",
+      "name": "Team Collaboration",
+      "description": "Run cross-functional sprints where every role works with Copilot.",
+      "challenge_ids": [
+        "challenge-0",
+        "challenge-9",
+        "challenge-10"
+      ]
+    },
+    {
+      "id": "ai-ml-path",
+      "name": "AI and ML",
+      "description": "Build ML models and agentic AI experiences on top of the Copilot platform.",
+      "challenge_ids": [
+        "challenge-2",
+        "challenge-6",
+        "challenge-7"
+      ]
+    },
+    {
+      "id": "azure-infrastructure",
+      "name": "Azure Infrastructure",
+      "description": "Provision and automate Azure platform baselines with Copilot and Terraform.",
+      "challenge_ids": [
+        "challenge-3",
+        "challenge-20",
+        "challenge-21"
+      ]
+    },
+    {
+      "id": "advanced-workflows",
+      "name": "Advanced Agentic Workflows",
+      "description": "Push past the basics into agentic workflows, the Copilot SDK, and spec-to-ship.",
+      "challenge_ids": [
+        "challenge-6",
+        "challenge-7",
+        "challenge-17"
+      ]
+    }
+  ]
+}

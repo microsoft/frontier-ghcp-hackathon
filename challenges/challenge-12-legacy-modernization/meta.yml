@@ -1,0 +1,15 @@
+id: challenge-12
+number: 12
+title: Legacy Code Modernization
+category: legacy-modernization
+difficulty: advanced
+duration_minutes: 420
+description: Reverse-engineer undocumented Java code, recover business logic, and migrate to modern frameworks with GitHub Copilot.
+focus: Reverse-engineering undocumented Java code, recovering business logic, migrating to modern frameworks, and capturing knowledge in Copilot-readable formats
+tags:
+  - legacy-modernization
+  - advanced
+  - legacy
+prerequisites: []
+track_url: tracks/challenge-12-legacy-modernization-track.md
+starter_path: challenges/challenge-12-legacy-modernization/

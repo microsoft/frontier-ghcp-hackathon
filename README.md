@@ -35,7 +35,7 @@ This hackathon is organized into **22 challenge tracks** covering all skill leve
 
 **[View All Tracks & Choose Yours](./tracks/README.md)**
 
-Coaches who need a focused workshop path can use the MkDocs [Challenge Set Builder](./docs/challenge-builder.md) to select complete challenges and share one URL-only set.
+Coaches who need a focused workshop path can use the site's Challenge Set Builder and Learning Paths pages to select challenges and generate a single shareable student URL.
 
 Each track provides a curated path through the challenges based on your role, with specific guidance, tips, and learning objectives.
 
@@ -45,20 +45,26 @@ Each track provides a curated path through the challenges based on your role, wi
 
 ## Documentation Site
 
-The repository can publish its markdown guides as an MkDocs site through GitHub Pages.
+The repository includes a bespoke static documentation site in the `web/` directory. The site is dependency-free and built with vanilla HTML, CSS, and JavaScript.
 
-For a local docs build:
+To build the site data locally:
 
 ```bash
-python -m venv .venv-docs
-. .venv-docs/bin/activate
-python -m pip install -r requirements-docs.txt
-mkdocs build --strict
+node web/build.js
 ```
 
-The site uses the linked markdown under `docs/` as its source, with navigation ordered around challenge selection, setup, challenge tracks, and shared reference docs.
+This reads `challenges/*/meta.yml`, `learning-paths.json`, and track markdown files, then writes JSON to `web/assets/data/`.
 
-The GitHub Pages deployment workflow builds the same site from `mkdocs.yml`.
+To preview locally:
+
+```bash
+cd web
+python3 -m http.server
+```
+
+Then open `http://localhost:8000/index.html` in your browser.
+
+The GitHub Pages deployment workflow automatically builds and deploys the site from `.github/workflows/deploy-site.yml` on every push to `main`.
 
 ## Getting Started
 
@@ -66,7 +72,7 @@ The GitHub Pages deployment workflow builds the same site from `mkdocs.yml`.
 
 **Not sure which track?** See the **[Track Selection Guide](./tracks/README.md)** for help choosing.
 
-**Running a coached session?** Open the docs site and use the **[Challenge Set Builder](./docs/challenge-builder.md)** to prepare a small challenge list for participants.
+**Running a coached session?** Use the site's Challenge Set Builder or Learning Paths pages to prepare a curated challenge set and share one student URL with participants.
 
 ### Step 2: Set Up Environment
 
@@ -551,7 +557,7 @@ After the hackathon:
 ### Quick Links
 
 - **[Choose Your Track](./tracks/README.md)** - Role-based learning paths
-- **[Challenge Set Builder](./docs/challenge-builder.md)** - Coach-curated challenge links
+- **Challenge Set Builder** - Available on the published site; coaches can curate challenge sets and generate student URLs
 - **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Common issues and solutions
 - **[Facilitator Guide](./FACILITATOR_GUIDE.md)** - For hackathon organizers
 - **[Contributing Guide](./CONTRIBUTING.md)** - Help improve this content

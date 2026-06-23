@@ -1,0 +1,170 @@
+/* Learning Paths page styles */
+
+.paths-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 840px;
+}
+
+.path-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  background: var(--c-700);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r);
+  transition: all 0.24s var(--ease);
+}
+
+.path-card:hover {
+  border-color: var(--c-faint);
+  box-shadow: var(--shadow-card);
+}
+
+.path-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.path-id {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--c-dim);
+  text-transform: lowercase;
+}
+
+.path-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--c-fg);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.path-desc {
+  color: var(--c-dim);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.path-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.path-challenges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.path-challenges h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--c-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.challenge-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.challenge-list li {
+  padding-left: 18px;
+  position: relative;
+}
+
+.challenge-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--c-gold);
+  font-size: 0.9rem;
+}
+
+.challenge-list a {
+  color: var(--c-fg);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.challenge-list a:hover {
+  color: var(--c-gold);
+  text-decoration: underline;
+}
+
+.path-share {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--c-line-soft);
+}
+
+.share-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.share-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--c-800);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-sm);
+  color: var(--c-fg);
+  outline: none;
+  transition: border-color 0.18s ease;
+}
+
+.share-input:focus {
+  border-color: var(--c-gold);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 640px) {
+  .path-card {
+    padding: 20px;
+  }
+
+  .path-title {
+    font-size: 1.4rem;
+  }
+
+  .share-controls {
+    flex-wrap: wrap;
+  }
+
+  .share-input {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}

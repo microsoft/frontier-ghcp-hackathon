@@ -1,0 +1,16 @@
+id: challenge-0
+number: 0
+title: Product Planning
+category: core-tracks
+difficulty: intermediate
+duration_minutes: 420
+description: Plan products, shape and manage backlogs, and produce documentation using GitHub Copilot and GitHub's collaboration features.
+focus: Product planning, backlog management, and documentation using GitHub Copilot and GitHub's collaboration features
+tags:
+  - core-tracks
+  - core
+  - backlog
+  - docs
+prerequisites: []
+track_url: tracks/challenge-0-product-planning-track.md
+starter_path: challenges/challenge-0-product-planning/

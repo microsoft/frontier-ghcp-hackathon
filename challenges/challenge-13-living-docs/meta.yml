@@ -1,0 +1,15 @@
+id: challenge-13
+number: 13
+title: Living Documentation
+category: workflow-automation
+difficulty: intermediate
+duration_minutes: 420
+description: Automate documentation generation for code, architecture, changelogs, and stakeholder summaries using Copilot prompts and agents.
+focus: Automating documentation generation -- javadoc, architecture diagrams, changelogs, and stakeholder-facing summaries -- using Copilot prompts and agents
+tags:
+  - workflow-automation
+  - advanced
+  - docs
+prerequisites: []
+track_url: tracks/challenge-13-living-docs-track.md
+starter_path: challenges/challenge-13-living-docs/

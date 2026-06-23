@@ -1,0 +1,14 @@
+id: challenge-10
+number: 10
+title: Technical Team Sprint
+category: team-sprints
+difficulty: advanced
+duration_minutes: 540
+description: Deliver a complete application from specification to production with a technical team using GitHub Copilot across all technical roles.
+focus: End-to-end application development with a technical team -- from a provided specification to production deployment -- using GitHub Copilot across every technical role
+tags:
+  - team-sprints
+  - advanced
+prerequisites: []
+track_url: tracks/challenge-10-tech-sprint-track.md
+starter_path: challenges/challenge-10-tech-sprint/
