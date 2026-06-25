@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@github/copilot-sdk": "^0.1.32",
+    "@github/copilot-sdk": "^1.0.4",
     "@octokit/rest": "^21.0.0"
   },
   "devDependencies": {

@@ -60,8 +60,8 @@ Warehouse managers currently check stock levels manually every morning using a s
 
 ## Business Rules
 
-- EOQ formula: Q = sqrt((2 * annual demand * order cost) / holding cost per unit)
-- Safety stock = average daily demand * lead time in days * 1.5 (safety factor)
+- EOQ formula: `Q = sqrt((2 * annual demand * order cost) / holding cost per unit)`
+- Safety stock = `average daily demand * lead time in days * 1.5` (safety factor)
 - Reorder quantity must be rounded up to the nearest supplier pack size
 - Products marked as "seasonal" use a different reorder threshold based on the current quarter
 - Purchase orders above 10,000 EUR require a second approval from the finance team

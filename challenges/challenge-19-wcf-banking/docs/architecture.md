@@ -67,7 +67,7 @@ A SOAP fault response looks like:
 
 ## CoreWCF vs Classic WCF
 
-This service runs on CoreWCF (https://github.com/CoreWCF/CoreWCF) -- an open-source, cross-platform port of WCF to .NET 5+. The programming model is identical to classic WCF (same attributes, same contracts, same binding names). The difference is in the hosting layer: CoreWCF uses ASP.NET Core's Kestrel server instead of WAS/IIS.
+This service runs on CoreWCF ([github.com/CoreWCF/CoreWCF](https://github.com/CoreWCF/CoreWCF)) -- an open-source, cross-platform port of WCF to .NET 5+. The programming model is identical to classic WCF (same attributes, same contracts, same binding names). The difference is in the hosting layer: CoreWCF uses ASP.NET Core's Kestrel server instead of WAS/IIS.
 
 Classic WCF required Windows and .NET Framework. CoreWCF runs on Linux and .NET 8, which is why this service works inside a Linux devcontainer.
 

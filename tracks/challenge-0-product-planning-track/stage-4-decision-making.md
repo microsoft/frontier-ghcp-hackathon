@@ -15,7 +15,7 @@ Real product work involves trade-offs, conflicting priorities, and imperfect inf
 
 2. **Stakeholder conflict resolution** -- Open [docs/stakeholder-requests.md](../../challenges/challenge-0-product-planning/docs/stakeholder-requests.md). It contains 4 conflicting requests from different stakeholders (VP Engineering, CEO, Head of Support, Lead Designer), each with a cost in engineering weeks. The total budget for v2.0 is 16 engineering weeks. The requests total 28 weeks. You must decide what gets funded and what gets cut or deferred. Write a one-page decision document explaining your allocation, what trade-offs you made, and how you would communicate the "no" to each stakeholder whose request was cut.
 
-3. **Buy-vs-build analysis** -- Pick one component from your feature specs that could be built in-house or replaced by a third-party service (e.g., notification delivery via SendGrid/Twilio vs. custom SMTP, search via Algolia vs. Elasticsearch, file storage via S3 vs. custom). Create a comparison table with: estimated build cost (weeks), monthly operating cost, vendor lock-in risk, customization flexibility, time-to-market, and ongoing maintenance burden. Make a recommendation with reasoning.
+3. **Buy-vs-build analysis** -- Pick one component from your feature specs that could be built in-house or replaced by a third-party service (e.g., notification delivery via SendGrid/Twilio vs. custom SMTP, search via Algolia vs. Elasticsearch, file storage via Azure Blob Storage vs. custom). Create a comparison table with: estimated build cost (weeks), monthly operating cost, vendor lock-in risk, customization flexibility, time-to-market, and ongoing maintenance burden. Make a recommendation with reasoning.
 
 ## Verification
 

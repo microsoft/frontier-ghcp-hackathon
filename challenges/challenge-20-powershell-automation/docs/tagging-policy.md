@@ -1,6 +1,6 @@
-# tagging-policy.md
 # Contoso IT -- Azure Resource Tagging Policy
-# This stub is used in Stage 3 (Copilot-assisted compliance documentation).
+
+> This stub is used in Stage 3 (Copilot-assisted compliance documentation).
 
 ## Required Tags
 
