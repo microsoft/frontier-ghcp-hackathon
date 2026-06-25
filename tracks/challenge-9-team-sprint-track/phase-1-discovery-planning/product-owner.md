@@ -8,7 +8,7 @@
 
 1. **Read the stakeholder brief** -- Open the [stakeholder brief](../../../challenges/challenge-9-team-sprint/docs/stakeholder-brief.md) and internalize the requirements. This is your specification from the "client."
 
-2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires GitHub Copilot Enterprise license) and use GitHub Spark to create a quick interactive prototype of CityPulse. Describe screens in natural language:
+2. **Prototype with GitHub Spark** -- Go to [github.com/spark](https://github.com/spark) (requires a GitHub Copilot license) and use GitHub Spark to create a quick interactive prototype of CityPulse. Describe screens in natural language:
    - A form where residents submit issue reports (title, description, category, location)
    - A page listing all reported issues with colored status badges
    - A page showing upcoming community events

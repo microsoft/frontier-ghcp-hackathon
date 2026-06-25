@@ -1,4 +1,4 @@
-/* GitHub Copilot Enterprise Hackathon — challenge detail page (?id=<challengeId>) */
+/* GitHub Copilot Hackathon — challenge detail page (?id=<challengeId>) */
 (function () {
   'use strict';
 
@@ -37,7 +37,7 @@
     const allChallenges = data.challenges || [];
     const outcomeConfig = data.outcomeConfig || [];
 
-    document.title = challenge.title + ' — GitHub Copilot Enterprise Hackathon';
+    document.title = challenge.title + ' — GitHub Copilot Hackathon';
     applyCategoryColor(challenge.category);
     renderHero(challenge, data.categories || [], outcomeConfig);
     renderSidebar(challenge, allChallenges);

@@ -1,4 +1,4 @@
-/* GitHub Copilot Enterprise Hackathon — catalog page: filterable + searchable challenge grid */
+/* GitHub Copilot Hackathon — catalog page: filterable + searchable challenge grid */
 (function () {
   'use strict';
 

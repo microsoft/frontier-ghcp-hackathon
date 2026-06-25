@@ -1,4 +1,4 @@
-# GitHub Copilot Enterprise Hackathon -- Web Site
+# GitHub Copilot Hackathon -- Web Site
 
 Bespoke static site for the hackathon. No server required -- just open `index.html` after building.
 

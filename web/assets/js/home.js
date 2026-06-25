@@ -1,4 +1,4 @@
-/* GitHub Copilot Enterprise Hackathon — home page */
+/* GitHub Copilot Hackathon — home page */
 (function () {
   'use strict';
 

@@ -1,8 +1,8 @@
-# GitHub Copilot Enterprise Hackathon
+# GitHub Copilot Hackathon
 
 ![Hackathon Banner](docs/images/hackathon-banner.jpg)
 
-Welcome to the GitHub Copilot Enterprise Hackathon! This repository helps your team **drive real work outcomes** using GitHub Copilot. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a hackathon on your own codebase.
+Welcome to the GitHub Copilot Hackathon! This repository helps your team **drive real work outcomes** using GitHub Copilot. Choose from **22 worked-example challenges** that demonstrate proven outcome patterns, or bring your own app and run a hackathon on your own codebase.
 
 ## Two Ways to Run This Hackathon
 

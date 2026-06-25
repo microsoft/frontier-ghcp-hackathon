@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * GitHub Copilot Enterprise Hackathon — build step (dependency-free, Node core only).
+ * GitHub Copilot Hackathon — build step (dependency-free, Node core only).
  *
  * Reads challenges/<slug>/meta.yml as the single source of truth and emits:
  *   web/assets/data/platform.json
@@ -368,7 +368,7 @@ function validateReferences(challenges, paths) {
 
 /* ─── Main ────────────────────────────────────────────────────────────────── */
 function main() {
-  console.log('Building GitHub Copilot Enterprise Hackathon site data...\n');
+  console.log('Building GitHub Copilot Hackathon site data...\n');
 
   ensureDir(OUT_DATA_DIR);
   ensureDir(OUT_CHALLENGES_DIR);

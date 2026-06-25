@@ -1,4 +1,4 @@
-/* GitHub Copilot Enterprise Hackathon — learning paths page */
+/* GitHub Copilot Hackathon — learning paths page */
 (function () {
   'use strict';
 
